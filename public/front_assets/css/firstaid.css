@@ -1,0 +1,52 @@
+.ourtp-section {
+    text-align: center;
+    padding: 1rem 0;
+}
+.lfindsyp-section li {
+    color: #1C68AD;
+    list-style: none;
+    /* display: inline-block; */
+}
+/* .lfindsyp-section li::marker {
+    color: #fff;
+    background-color: #f39506;
+    padding: 5px;
+    width: 10px;
+    height: 10px;
+} */
+.lfindsyp-content {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+i.fas.fa-dot-circle {
+    font-size: 14px;
+    color: #f39506;
+}
+.wtsaus-heading {
+    text-align: center;
+}
+.wtsaus-heading h3 {
+    color: #fff;
+    font-size: 46px;
+}
+section.wtsaus-section{
+    background-image: linear-gradient(87deg, #1c68addb, #1c68addb),url(../img/program5.png);
+    background-position: center center;
+    background-size: cover;
+    padding: 2rem 0;
+    
+}
+p.benefit1.nam {
+    margin: 0;
+    color: #F39506;
+}
+.wtsaus-sec p {
+    color: #ffff;
+}
+.wtsaus-sec{
+    text-align: center;
+}
+.lfindsyp-section {
+    padding: 1rem 0;
+}

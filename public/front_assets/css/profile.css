@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,700;1,400;1,700&display=swap');
+
+
+
+.nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: block;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.account-input input {
+    border: none;
+    /* padding: 0px 0px; */
+    
+}
+.account-email input {
+    border: none;
+    width: 58%;
+}
+.edit-profile {
+    padding-top: 60px;
+}
+.edit-profile a {
+    background-color: #F59406;
+    padding: 10px 30px;
+    color: #ffffff;
+}
+
+.account-email button {
+    font-size: 13px;
+    color: #F59406;
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+section.profile-sec {
+    padding: 80px 0px;
+}
+
+li.nav-item a {
+    font-size: 16px;
+    color: #000000;
+    /* font-family: 'Poppins'; */
+    font-family: "OpenSans-Bold";
+    padding: 0;
+    padding: 10px 0px;
+}
+
+.profile-john-doe h3 {
+    font-size: 32px;
+    color: #1B68AC;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+
+.booking_tab table.table thead {
+    background: transparent;
+  }
+  .booking_tab table.table thead th {
+    border: 0;
+    font-size: 20px;
+    color: #242424;
+    font-family: "Helvetica Rounded LT Std";
+  }
+  .booking_tab table.table tbody td {
+    border: 0;
+    font-family: "Poppins";
+    color: #090909;
+    font-size: 15px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+.booking_tab table.table tbody tr:nth-child(odd) {
+    background: transparent;
+    border: 1px solid;
+    padding: 40px;
+}
+  .booking_tab table.table thead th.date {
+    text-align: left;
+  }
+  .booking_tab table.table tbody td a {
+    color: #6b6b6b;
+    text-decoration: underline;
+  }
+  .booking_tab table.table tbody tr:nth-child(even) {
+    /* background: #fbfbfb; */
+    border: 1px solid;
+}
+  .booking_tab table.table tbody tr {
+    height: 53px;
+    border-bottom: 5px solid #fff;
+  }
+
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #000000;
+    background-color: transparent;
+}
+
+  .account h3 {
+    font-size: 20px;
+    color: Account;
+    color: #000000;
+    font-family: 'Poppins';
+    font-weight: 700;
+    padding-bottom: 50px;
+}
+
+.session h3 {
+    font-size: 17px;
+    color: #1B68AC;
+    font-family: 'Poppins';
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.all-profile {
+    border: 1px solid #CCCCCC;
+    padding: 30px;
+    height: 440px;
+}
+
+.account-input input::placeholder {
+    font-size: 10px;
+    color: #000000;
+}
+
+.account-email input::placeholder {
+    font-size: 12px;
+    color: #000000;
+}
+
+.profile-john-doe {
+    border-bottom: 1px solid #ccc;
+}
+
+.account-head {
+    position: relative;
+    top: -80px;
+    left: 130px;
+    /* padding: 30px 0px; */
+    padding-top: 10px;
+}
+
+.account-head h2 {
+    font-size: 46px;
+    font-family: 'Volkhov'!important;
+    font-weight: 400 !important;
+}
+
+.for-padding {
+    padding-bottom: 46px;
+}
+
+.account-email {
+    display: grid;
+}

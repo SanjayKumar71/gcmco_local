@@ -1,0 +1,1 @@
+[08-Nov-2022 14:48:46 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Facades\Schema as Schema because the name is already in use in /home/custmayi/heedway.custom-ourbase.com/app/Providers/AppServiceProvider.php on line 8

@@ -1,0 +1,32 @@
+section.blogdetail_page {
+    padding: 4rem 0;
+}
+
+.blogdetail_content {
+    padding: 3rem 2rem;
+}
+
+.blogdetail_content small {
+    font-family: "Poppins";
+}
+
+.blogdetail_sec img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin: auto;
+    text-align: center;
+}
+.blogdetail_content p {
+    font-family: 'calvino_sb';
+}
+.blogdetail_img {
+    width: 83%;
+    height: 650px;
+    margin: auto;
+}
+@media(max-width:1199px){
+    .blogdetail_sec img{
+        height: 450px;
+    }
+}

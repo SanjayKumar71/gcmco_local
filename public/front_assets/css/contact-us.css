@@ -1,0 +1,208 @@
+/* section.about-us-page .head {
+	background-image: url(../img/contact-us1.jpg);
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	text-align: center;
+	padding: 2rem;
+}
+.contact-us-overlay {
+	background-color: #000000ad;
+	opacity: 1;
+	transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+.head h1 {
+	position: relative;
+}
+/* .back-video{
+    background-image: url(../img/contact-us2.mp4);
+} */
+/* .back-video video {
+	max-width: 100%;
+	filter: opacity(0.5);
+} */
+/* .contact-us-overlay1 {
+    background-color: #FFFFFF;
+    opacity: 0.7;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+} */
+/* .back-video {
+	position: relative;
+}
+.contact-info-sec {
+	position: relative;
+	top: -22rem;
+	left: 26px;
+}
+.contact-info-sec p {
+	padding: 0 5rem 0 0;
+}
+.contact-info-sec h3 {
+	color: #f39506;
+}
+.contactus-content {
+	display: flex;
+	gap: 10px;
+	color: #1c68ad;
+	font-size: 20px;
+}
+.contactus-content h6 {
+	display: inline-block;
+	font-size: 20px;
+} */
+/* .contactus-content:hover{
+    color: #f39506;
+} */
+/* .contactus-content a:hover{
+    color: #f39506;
+} */
+/* .contactus-content:hover h6 {
+	color: #f39506;
+}
+.contactus-content:hover i {
+	color: #f39506;
+}
+section.about-us-page label {
+	color: #005046;
+	font-size: 24px;
+}
+input.contact-submit {
+	background: #f39506;
+	color: #fff;
+	border: 1px solid #02010100;
+	padding: 1rem 2rem;
+}
+@media (max-width: 767px) {
+	.contactus-content h6 {
+		font-size: 13px;
+	}
+	.contact-info-sec {
+		position: unset;
+		transform: translate(10px, -14rem);
+	}
+	.contactus-content {
+		font-size: 13px;
+	}
+	.contact-info-sec p {
+		font-size: 13px;
+	}
+} */
+
+/* Contact Css Start Here */
+.contact-us-section .time_zone_contactus{
+	height: auto;
+}
+
+.about-us-section {
+	padding: 60px 0;
+}
+.contact-us-section {
+	padding: 60px 0 0;
+}
+.contact-us-section .content-wrapper .title-wrapper {
+	padding-bottom: 20px;
+}
+.contact-us-section .content-wrapper .title-wrapper h4 {
+	font-size: 30px;
+	color: #000000;
+}
+.contact-us-section .content-wrapper .title-wrapper p {
+	font-family: "OpenSans-Regular";
+}
+.contact-us-section .content-wrapper ul.info {
+	list-style: none;
+	padding: 0;
+}
+.contact-us-section .content-wrapper ul.info li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 25px;
+}
+.contact-us-section .content-wrapper ul.info li p {
+	margin: 0px;
+}
+.contact-us-section .content-wrapper ul.info li .icon {
+	border: 2px solid #1b68ac;
+	width: 80px;
+	height: 70px;
+	line-height: 85px;
+	text-align: center;
+	border-radius: 5px;
+}
+.contact-us-section .content-wrapper ul.info li .txt {
+	padding-left: 20px;
+}
+.contact-us-section .content-wrapper ul.info li .txt h4 {
+	font-family: "volkr";
+	color: #000000;
+	margin: 0;
+}
+.contact-us-section .content-wrapper ul.info li .txt p {
+	color: #0000008f;
+	font-family: "Poppins";
+}
+.contact-us-section .content-wrapper ul.info li .txt h4 a {
+	font-family: "Montserrat";
+	color: #1b68aceb;
+	text-decoration: none;
+}
+.contact-us-section .content-wrapper ul.info li .txt a {
+	color: #0000008f;
+	font-family: "OpenSans-Regular";
+}
+.contact-us-section .content-wrapper ul.info li .txt p {
+	color: #0000008f;
+	font-family: "OpenSans-Regular";
+}
+.contact-us-section form {
+	border: 1px solid #ddd;
+	border-radius: 9px 9px 0 0;
+}
+.contact-us-section form .title {
+	background: #1b68ac;
+	padding: 5px 20px;
+	border-radius: 7px 7px 0px 0px;
+}
+.contact-us-section form .title h4 {
+	color: #fff;
+	margin: 0;
+	font-size: 20px;
+}
+.contact-us-section form .row {
+	padding: 20px 20px;
+}
+.contact-us-section form .form-group .form-control {
+	border: 1px solid #dcdcdc;
+	padding: 12px 10px;
+	font-size: 14px;
+	box-shadow: none;
+}
+.contact-us-section form textarea {
+	height: 130px;
+	resize: none;
+}
+.contact-us-section form .form-group .form-control::placeholder {
+	color: #00000082;
+}
+.contact-us-section form .button-group button.btn {
+	background: #f49507;
+	color: #fff;
+	font-family: "Nexa-Regular";
+	border-radius: 0;
+	padding: 10px 0;
+	width: 60%;
+}
+.map-contact {
+	padding-top: 60px;
+}
+/* Contact Css End Here */

@@ -1,0 +1,84 @@
+p {
+    text-shadow: 0 0 black;
+}
+.succes_story_page h2.race_font {
+    /* font-family: "calvino_sb"; */
+	font-family: "racing";
+    font-weight: 400;
+}
+
+.succes_story_page .home_about_content p {
+    font-family: "calvino_l";
+    font-size: 16px;
+}
+
+.succes_story_page .about_carolyn_sec_blue .home_about_content {
+    background: #E2FEFF;
+    padding: 5rem 2rem;
+    margin-left: -8rem;
+}
+
+.succes_story_page span.readmore_text {
+    color: #37CACF;
+}
+
+.succes_story_page section.about_carolyn_sec {
+    background: #fff;
+    padding: 5rem 0;
+    padding-bottom: 0rem;
+}
+.succes_story_page section.about_carolyn_sec:last-child {
+    padding-bottom: 4rem;
+}
+.succes_story_page .about_carolyn_img img {
+    width: 400px;
+    height: 500px;
+}
+
+.succes_story_page .about_carolyn_img {
+    margin-left: 2.7rem;
+}
+
+.succes_story_page .about_carolyn_grey_sec h2.race_font {
+    /* font-family: "calvino_sb"; */
+	font-family: "racing";
+    font-weight: 400;
+}
+
+.succes_story_page .about_carolyn_grey_sec .home_about_content p {
+    font-family: "calvino_l";
+    font-size: 14px;
+}
+
+.succes_story_page .about_carolyn_grey_sec .home_about_content {
+    background: #F8F3F1;
+    padding: 4rem 2rem;
+    margin-right: -5.4rem;
+    transform: translate(92px, 10px);
+    z-index: 1;
+    position: relative;
+}
+
+.succes_story_page .about_carolyn_grey_sec span.readmore_text {
+    color: #37CACF;
+}
+
+.succes_story_page .about_carolyn_grey_sec section.about_carolyn_sec {
+    background: #fff;
+    padding: 5rem 0;
+    padding-bottom: 3rem;
+}
+
+.succes_story_page .about_carolyn_grey_sec .about_carolyn_img img {
+    width: 500px;
+    height: 500px;
+}
+
+.succes_story_page .about_carolyn_grey_sec .about_carolyn_img {
+    margin-left: 1.7rem;
+    text-align: left;
+}
+
+section.about_carolyn_sec.about_carolyn_grey_sec {
+    padding-bottom: 5rem;
+}

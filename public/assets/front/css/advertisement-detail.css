@@ -1,0 +1,122 @@
+.advertisement_detail img {
+  width: 380px;
+  height: 330px;
+}
+.week_slider_img2.advertisement_detail {
+  background: unset;
+  box-shadow: unset;
+  -webkit-box-shadow: unset;
+  -moz-box-shadow: unset;
+  padding: 1rem;
+}
+p.product_name1 {
+  color: #095401;
+  font-weight: bold;
+  font-size: 22px;
+}
+.add_users img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.add_users p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+.add_users {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+p.product_name3 {
+  color: #67828e;
+  font-weight: bold;
+  margin-top: 15px;
+}
+p.green_para3 {
+  color: #3da033;
+  font-weight: bold;
+  font-size: 35px;
+  display: inline-block;
+  font-family: "gtwb";
+}
+.products-par.add_prod_para del {
+  color: #8398a1;
+  font-weight: bold;
+  font-size: 22px;
+  /* line-height: 53px; */
+  margin-left: 1rem;
+}
+.products-par.add_prod_para a.btn {
+  height: fit-content;
+  background-color: #3da033;
+  padding: 0.5rem 2rem;
+  border-radius: 0;
+}
+.products-par.add_prod_para a.btn:hover {
+  background: #fff;
+}
+section.advertisement_d_sec
+  .week_img_content
+  .addtocartbtn
+  a.btn.custom_wish:hover {
+  color: #ffa33f !important;
+  background: #fff;
+  border: 1px solid #ffa33f;
+}
+.products-par {
+  justify-content: space-between;
+  align-items: center;
+}
+.sharing_social p {
+  color: #095401;
+  font-weight: bold;
+  margin: 0;
+}
+.sharing_social i {
+  color: #3da033;
+  margin-left: 15px;
+}
+.sharing_social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.advert_d_con::before {
+  content: "";
+  position: absolute;
+  background: url(../img/border.png);
+}
+.advert_d_con::after {
+  position: absolute;
+  content: "";
+  background: url(../img/border.png);
+}
+.advert_d_con {
+  position: relative;
+}
+.products-par.add_prod_para.advert_d_con {
+  margin-top: 3px;
+  line-height: 40px;
+}
+.line_img img {
+  width: auto;
+  height: auto;
+}
+.products-par.add_prod_para.advert_d_con p {
+  margin: 0;
+}
+.advertisement_d_product h5 {
+  color: #013307;
+  font-size: 24px;
+}
+.advertisement_d_product p {
+  color: #707070;
+  font-size: 14px;
+}
+.advertisement_d_product {
+  margin-top: 5rem;
+}

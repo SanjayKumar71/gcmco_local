@@ -1,0 +1,142 @@
+p {
+    text-shadow: 0 0 black;
+}
+.myevent_page img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.myevent_page.blog_blue .home_about_content {
+    height: 350px;
+    margin-left: -2rem;
+    background: #e2feff;
+}
+
+.myevent_page .home_about_content {
+    height: 250px;
+    margin-left: -2rem;
+}
+
+section.myevent_page {
+    margin: 3rem 0;
+    margin-top: 0;
+}
+
+section.myevent_page .page-link {
+    font-family: "Poppins";
+    background: transparent;
+    border: 0;
+    color: #A4A4A4;
+}
+
+section.myevent_page .page-item.active .page-link {
+    z-index: 2;
+    color: #000;
+    background-color: #e2feff;
+    border-color: #e2feff;
+}
+
+section.myevent_page .home_about_content small {
+    font-family: "Poppins";
+    font-size: 14px;
+}
+
+.myevent_page section .blog_sec.blog_blue .home_about_content {
+    height: 250px;
+    margin-left: -2rem;
+    background: #e2feff;
+}
+
+.myevent_page section.blog_sec {
+    margin: 3rem 0;
+    margin-top: 4rem;
+}
+
+.myevent_page .blog_sec.blog_blue .home_about_content {
+    height: 250px;
+    margin-left: -2rem;
+    background: #e2feff;
+}
+
+.myevent_page .home_about_content span.font_italic {
+    font-family: "calvino_italic";
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.myevent_page a.btn img.img-fluid {
+    filter: brightness(0);
+    width: 15px;
+    height: 15px;
+}
+
+.myevent_page .home_about_content a.btn {
+    padding: 0;
+    background: transparent;
+    font-family: "calvino_sb";
+    font-size: 18px;
+}
+.myevent_page .home_about_content a.btn:hover {
+    background: transparent;
+    color: #000 !important;
+    border: 0;
+}
+
+.myevent_page .home_about_content {
+    padding: 2rem 2rem;
+}
+
+.myevent_page .home_about_content p {
+    line-height: 2;
+    display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+.home_about_content p {
+    font-size: 14px;
+}
+.top_heading  h4 {
+    font-size: 27px;
+}
+.top_heading  h4 {
+    font-size: 27px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.myevent_page .home_about_content span.font_italic {
+    font-size: 24px;
+}
+.top_heading.d-flex.align-items-center.justify-content-between a.btn {
+    background: #E2FEFF;
+    padding: 8px 20px 5px;
+    position: relative;
+    font-size: 14px;
+    top: -9px;
+    left: -14px;
+    font-family: 'calvino_sb';
+}
+section.blog_sec.blog_blue .top_heading.d-flex.align-items-center.justify-content-between a.btn {
+    background: #F8F3F1;
+    padding: 8px 20px 5px;
+    position: relative;
+    top: -9px;
+    left: -14px;
+}
+span.font_italic {
+    font-weight: 600;
+    font-size: 43px;
+    color: #000000;
+    font-family: "Calvino-Grande-Semibold-Italic";
+}
+section.universal_banner.pb-5 p {
+    font-size: 17px;
+    font-family: 'calvino_l';
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

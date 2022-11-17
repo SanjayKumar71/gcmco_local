@@ -1,0 +1,51 @@
+section.pfirst-aid-page .slick-dots {
+    bottom: 0;
+}
+section.pfirst-aid-page .slick-dots li{
+    margin-right: 0;
+} 
+section.pfirst-aid-page .slick-dots li.slick-active button:before {
+    color: #fff;
+}
+section.pfirst-aid-page section.section-bofat {
+    background-color: #fff;
+    padding: 2rem 0;
+}
+section.pfirst-aid-page section.section-bofat .skills-bar .bar .info h5{
+    color: #1C68AD;
+    font-size: 24px;
+    margin: 0;
+}
+.progress-line.css span::after {
+    content: "80%";
+}
+.bar .progress-line.css span {
+    width: 80%;
+}
+.img-h {
+    height: 390px;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 21%);
+}
+div#aboutpage2 {
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 21%);
+}
+.bofat-head {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.workplace-content h3{
+    color: #1C68AD;
+    font-size: 46px;
+    line-height: 1;
+}
+.latest-video {
+    margin: auto;
+}
+section.workplace-sec {
+    background: #fff;
+    padding: 2rem 0;
+}
+section.workplace-sec .workplace video {
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 21%);
+}

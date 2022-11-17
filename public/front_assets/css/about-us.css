@@ -1,0 +1,243 @@
+section.section-head .head {
+	background: #a5dcf4;
+}
+.wtopt-section h3 {
+	color: #1c68ad;
+	font-size: 48px;
+	line-height: 55px;
+	padding-bottom: 10px;
+}
+.wtopt-section p {
+	font-family: "OpenSans-Medium";
+	color: #a6a6a6;
+	line-height: 22px;
+}
+.wtopt-section .wtopt-content {
+	margin: auto 0;
+}
+.wtopt-section {
+	padding: 10px 0;
+}
+h3.pptp-head {
+	color: #1c68ad;
+	font-size: 48px;
+	line-height: 58px;
+	padding-bottom: 30px;
+}
+.pptp-center {
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+.pptpsec .content-wrapper {
+	padding-left: 15px;
+}
+.pptpsec .content-wrapper p {
+	max-width: 90%;
+	margin-bottom: 0;
+}
+section.pptp-section {
+	background-color: #a5dcf4;
+	padding: 20px 0;
+}
+.couslingboxes-sec {
+	margin-bottom: 30px;
+}
+.couslingboxes-sec li {
+	font-size: 70px;
+	color: #f39506;
+	transition: 0.2s;
+}
+.couslingboxes-sec li:hover {
+	transform: scale(1.1);
+}
+h3.pptp-head1 {
+	font-size: 40px;
+	color: #1c68ad;
+}
+p.counslingpara {
+	color: #666666;
+	font-weight: 400;
+}
+.pptpsec {
+	background: #fff;
+	padding: 2rem 1rem;
+	align-items: center;
+	box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 13%);
+}
+.about_first p.benefit1 {
+	color: #f39506;
+}
+.btncenter {
+	text-align: center;
+}
+.letmin .wtopt-section p.benefit1 {
+	color: #f39506;
+}
+.letmin .wtopt-section h3.pptp1 {
+	line-height: 45px;
+}
+.letmin .wtopt-section p {
+	color: #000;
+}
+section.letmin .wtopt-section h3 {
+	color: #1c68ad;
+	font-size: 36px;
+}
+section.services-section li {
+	font-size: 70px;
+	color: #f39506;
+	transition: 0.2s;
+}
+section.services-section .pptpsec {
+	text-align: center;
+	box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 13%);
+}
+h5.pptp-head1 {
+	color: #1c68ad;
+}
+section.services-section li:hover {
+	transform: scale(1.1);
+}
+h3.pptp1 {
+	color: #1c68ad;
+	font-size: 36px;
+}
+.img-sec {
+	margin: auto 0;
+}
+.wrtb-center {
+	text-align: center;
+}
+.counts {
+	text-align: center;
+}
+.counts p.benefit1 {
+	font-size: 16px;
+}
+section.wrtb .col-md-3:not(:last-child) {
+	border-right: 1px solid #fff;
+}
+section.wrtb {
+	padding: 0.5rem 0;
+}
+.services-section .wtopt-section p.benefit1 {
+	color: #f39506;
+	margin: 0;
+}
+.services-section {
+	padding-top: 10px;
+}
+.services-section .wtopt-section h3.pptp1 {
+	padding-bottom: 0;
+	margin: 0;
+}
+.services-section .wtopt-section p {
+	color: #000;
+}
+.services-section .img_box img {
+	height: 500px;
+	width: 100%;
+	object-fit: cover;
+}
+#counter .wrtb-center p.benefit1 {
+	margin: 0;
+}
+#counter .wrtb-center h3.pptp-head {
+	padding-bottom: 0px;
+}
+#counter .wrtb-center {
+	max-width: 75%;
+	margin: 0px auto;
+	padding-bottom: 15px;
+}
+#counter h3.pptp-head.count {
+	padding-bottom: 0;
+	font-weight: 900;
+}
+ul.ttmef {
+	padding: 0rem;
+}
+ul.ttmef li {
+	list-style: none;
+	display: flex;
+	gap: 10px;
+}
+ul.ttmef li i {
+	background: #f39506;
+	height: fit-content;
+	padding: 0.6rem;
+	color: #fff;
+	transition: 0.2s;
+	border-radius: 50%;
+	font-size: 30px;
+}
+ul.ttmef {
+	padding: 0rem;
+}
+ul.ttmef li i:hover {
+	color: #818a91;
+}
+h3.pptp2 {
+	color: #1c68ad;
+	font-size: 26px;
+}
+div#aboutpage1 img {
+	animation: zoominoutsinglefeatured 10s infinite;
+	animation-name: mymove;
+	/* transform: scale(1.0); */
+}
+.process_sec {
+	padding: 20px 0;
+}
+.process_sec .process-cons-sec p.benefit1 {
+	margin-bottom: 10px;
+	color: #f39506;
+}
+.process_sec .process-cons-sec h3 {
+	margin: 0;
+}
+.process_sec .process-cons-sec ul.ttmef {
+	margin-top: 40px;
+}
+.process_sec .process-cons-sec ul.ttmef li i {
+	height: 60px !important;
+	width: 60px !important;
+	text-align: center;
+	line-height: 40px;
+}
+.process_sec .process-cons-sec ul.ttmef li h3.pptp2 {
+	line-height: 20px;
+}
+.process_sec .process-cons-sec ul.ttmef li {
+	margin-bottom: 15px;
+}
+.process_sec .process-cons-sec ul.ttmef li .content {
+	flex: 1;
+}
+.process_sec img {
+	height: 500px;
+	width: 100%;
+	object-fit: cover;
+}
+@keyframes mymove {
+	0% {
+		transform: scale(1) rotate(0deg);
+	}
+
+	100% {
+		transform: scale(1.2) rotate(0deg);
+	}
+}
+@media (max-width: 767px) {
+	.pptp-center {
+		width: auto;
+	}
+	h3.pptp-head {
+		line-height: 1;
+	}
+	.pptpsec {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+}

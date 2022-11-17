@@ -1,0 +1,60 @@
+.content_left span {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.content_left h4 {
+    margin-bottom: 0;
+    line-height: 1;
+    font-family: "calvino_b";
+}
+
+.left_content {
+    display: flex;
+    gap: 20px;
+    margin-left: 2rem;
+    padding: 2rem 0;
+}
+
+.left_content img {
+    width: 26px;
+}
+
+.contact_left_blue {
+    background: #e2feff;
+    padding: 2rem 0;
+}
+
+.contact_right {
+    background: #f8f3f1;
+    padding: 3rem;
+}
+
+.contact_left {
+    padding: 5rem 0;
+    background: #e2feff;
+}
+
+section.contact_sec {
+    padding: 3rem 0 6rem;
+}
+
+.contact_right h2 {
+    font-size: 25px;
+}
+
+.contact_right span.font_italic {
+    font-size: 25px;
+}
+
+.contact_right .form-group .form-control {
+    line-height: 2;
+}
+
+.contact_right h2.race_font {
+    line-height: 1;
+}
+section.contact_page .row.contact_he {
+    background: #e2feff;
+}

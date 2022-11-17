@@ -1,0 +1,195 @@
+/* Heart Saver Css Start Here */
+.program_sec {
+	padding: 50px 0;
+}
+.tabs-detail {
+	padding-bottom: 50px;
+}
+.program_sec .picture-box {
+	border: 1px solid #dcdcdc;
+	padding: 20px 0;
+	height: 90%;
+	border-radius: 8px;
+}
+.program_sec .sale-tag {
+	padding-bottom: 30px;
+	padding-left: 20px;
+}
+.program_sec .sale-tag h3 {
+	font-size: 20px;
+	color: #f59406;
+	font-family: "OpenSans-Bold";
+}
+.program_sec .picture-box img.img-fluid {
+	margin: 0px auto;
+}
+.program_sec .picture-box .img-box {
+	padding: 30px 0 0px;
+}
+.program_sec .picture-box .sub-image-box img.img-fluid {
+	padding: 0 10px;
+	border-radius: 5px;
+	height: 90px;
+	width: 100%;
+}
+.program_sec .content-wrapper .description p {
+	max-width: 60%;
+}
+.program_sec .content-wrapper .title h3 {
+	color: #000000;
+}
+.program_sec .content-wrapper .title h4 {
+	color: #000000;
+	font-family: "OpenSans-Bold";
+}
+.program_sec .content-wrapper .title h5 {
+	font-size: 18px;
+	font-family: "OpenSans-Bold";
+	color: #000;
+}
+.program_sec .content-wrapper .price {
+	display: flex;
+	align-items: center;
+	padding: 10px 0 15px;
+}
+.program_sec .content-wrapper .price h3 {
+	font-size: 25px;
+	color: #f50000;
+	font-family: "OpenSans-Bold";
+	line-height: 35px;
+	margin: 0;
+}
+.program_sec .content-wrapper .price h3 span.light {
+	font-family: "OpenSans-Regular";
+	font-size: 20px;
+}
+.program_sec .content-wrapper .price h4.person {
+	margin: 0 0 0 40px;
+	font-size: 16px;
+	font-family: "OpenSans-Regular";
+	color: #4096d9;
+	display: flex;
+	align-items: center;
+}
+.program_sec .content-wrapper .price h4.person svg {
+	margin-right: 10px;
+}
+.program_sec .content-wrapper p {
+	color: #000000;
+	font-family: "OpenSans-Regular";
+	font-size: 14px;
+	line-height: 26px;
+}
+.program_sec .content-wrapper .description {
+	display: flex;
+}
+.tabs-detail .nav-tabs {
+	border: 0;
+}
+.tabs-detail .nav-tabs li.nav-item a.nav-link.active {
+    border: 0;
+    border-radius: 0;
+    color: #000000a6;
+}
+.tabs-detail .nav-tabs li.nav-item a.nav-link {
+	color: #000000;
+}
+.tabs-detail .tab-content {
+	border: 1px solid #dcdcdc;
+	border-radius: 10px;
+	padding: 40px 30px 30px;
+	height: 100%;
+}
+.tabs-detail .tab-content .title {
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.tabs-detail .tab-content .title h4 {
+	margin: 0;
+	font-size: 20px;
+	color: #000000;
+	font-family: "OpenSans-Bold";
+}
+.tabs-detail .tab-content p {
+	font-family: "OpenSans-Medium";
+	font-size: 14px;
+}
+.tabs-detail .tab-content .all-schedule .schedule-box {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 25px;
+}
+.tabs-detail .tab-content .all-schedule .schedule-box p {
+	margin: 0;
+}
+.tabs-detail .tab-content .all-schedule .schedule-box p.date {
+	background: #4096d9;
+	font-size: 14px;
+	font-family: "OpenSans-Regular";
+	color: #fff;
+	padding: 4px 8px;
+	border-radius: 5px;
+}
+.tabs-detail .tab-content .all-schedule .schedule-box p.time {
+	font-family: "OpenSans-Regular";
+}
+.tabs-detail .tab-content .all-schedule .schedule-box p i {
+	color: #1c68ad;
+}
+.tabs-detail .tab-content .all-schedule .schedule-box p a {
+	color: #1c68ad;
+	text-decoration: underline;
+}
+.tabs-detail .tab-content .all-schedule .schedule-box button.btn {
+	background: #1c68ad;
+	color: #fff;
+	font-size: 14px;
+	padding: 10px 25px;
+	display: flex;
+	align-items: center;
+}
+.tabs-detail .tab-content .all-schedule .schedule-box button.btn i {
+	margin-right: 10px;
+}
+.tabs-detail .tab-content .button-group {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 60px;
+}
+.tabs-detail .tab-content .button-group button.show-more {
+	font-size: 14px;
+	background: transparent;
+	border: 1px solid #000;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.tabs-detail .tab-content .button-group button.total-schedule {
+	font-size: 14px;
+	background-color: #4096d9;
+	border: 0;
+	padding: 0 15px;
+	border-radius: 5px;
+	height: 32px;
+	color: #fff;
+	outline: none;
+	box-shadow: none;
+}
+.tabs-detail .tab-content .column-2 {
+	column-count: 2;
+}
+.tabs-detail .tab-content h5 {
+	color: #000000;
+	font-size: 16px;
+	font-family: "OpenSans-Regular";
+	margin-left: -30px;
+}
+.tabs-detail .tab-content ul.points li a {
+	color: #1c68ad;
+	text-decoration: underline;
+}
+.tabs-detail .tab-content ul.points li a p {
+	margin-bottom: 5px;
+}
+/* Heart Saver Css End Here */

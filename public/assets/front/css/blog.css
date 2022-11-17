@@ -1,0 +1,100 @@
+.blog_img img {
+    height: 350px;
+}
+
+.blog_sec.blog_blue .home_about_content {
+    height: 350px;
+    margin-left: -2rem;
+    background: #e2feff;
+}
+
+.blog_sec .home_about_content {
+    height: 350px;
+    margin-left: -2rem;
+    padding: 3rem 3rem;
+}
+
+section.blog_sec {
+    margin: 3rem 0;
+}
+
+section.blog_page .page-link {
+    font-family: "Poppins";
+    background: transparent;
+    border: 0;
+    color: #A4A4A4;
+}
+
+section.blog_page .page-item.active .page-link {
+    z-index: 2;
+    color: #000;
+    background-color: #e2feff;
+    border-color: #e2feff;
+}
+
+.blog_sec .home_about_content span.readmore_text {
+    color: #37CACF;
+    font-family: 'calvino_sb';
+}
+
+/* blogs start here */
+h5.race_font {
+    font-family: "racing";
+    font-weight: 400;
+    font-size: 22px;
+}
+h4{
+    font-family: 'calvino_r';
+    font-size: 26px;
+}
+h4 span.font_italic{
+    font-size: 26px;
+}
+p {
+    margin-bottom: 0px;
+    font-family: 'calvino_l';
+    font-size: 13px;
+    text-shadow: 0 0 black;
+}
+.text_box {
+    padding: 16px 15px 22px;
+}
+.text_box.blue{
+    background: #E2FEFF;
+}
+.single_blog figure img {
+    width: 100%;
+    height: 265px;
+    object-fit: cover;
+}
+.text_box.greeny {
+    background: #F8F3F1;
+}
+ul.pagination {
+    margin: 47px 0px 134px;
+}
+.text_box a {
+    color: #37CACF;
+    font-size: 16px;
+    font-family: 'calvino_sb';
+    display: inline;
+}
+.single_blog .text_box p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* display:inline; */
+}
+.single_blog .text_box  h5 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.single_blog .text_box h4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

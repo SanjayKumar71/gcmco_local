@@ -1,0 +1,24 @@
+------- HeedWay --------
+
+Website link: 
+	- https://heedway.custom-ourbase.com
+
+AdminCredentials:
+ 	- email: admin@example.com
+ 	- password: @dmin123
+
+Modules:
+	Admin:
+		- Category
+		- Program Type
+		- Programs
+		- Contact Queries
+		- Site Settings
+	Front:
+		- Home
+		- About Us
+		- Contact Us
+		- Programs (In-Progress)
+
+
+

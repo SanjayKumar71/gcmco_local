@@ -1,0 +1,66 @@
+p {
+    text-shadow: 0 0 black;
+}
+.story_banner_content {
+    text-align: center;
+}
+
+.story_banner_content h3 {
+    margin-top: 1rem;
+}
+
+.story_banner_content span.font_italic {
+    font-size: 30px;
+}
+
+.inspiring_content span.font_italic {
+    font-size: 30px;
+}
+
+section.inspiring_sec {
+    background: #F8F3F1;
+    padding: 5rem 0;
+}
+
+.inspiring_content h3 {
+    font-size: 40px;
+}
+.inspiring_content span.calvinosb_font {
+    font-family: "calvino_sb";
+    font-size: 40px;
+}
+.inspiring_content span.font_italic {
+    font-size: 40px;
+    font-family: "Calvino-Grande-Semibold-Italic";
+}
+
+section.story_banner {
+    padding-bottom: 1rem;
+}
+
+/* section.inspiring_sec img {
+    width: 480px;
+    height: 600px;
+} */
+.inspiring_content{
+    margin-top: 10px;
+}
+.inspiring_img {
+    text-align: right;
+}
+p.top_text {
+    font-family: 'calvino_l';
+    font-size: 16px;
+    padding: 0 160px;
+}
+h2.top_heading {
+    font-family: 'calvino_sb';
+    font-size: 40px;
+}
+.inspiring_img img {
+    padding-left: 50px;
+}
+.inspiring_content p{
+    font-size: 16px;
+    font-family: "calvino_l";
+}

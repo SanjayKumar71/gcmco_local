@@ -1,0 +1,45 @@
+<?php
+
+namespace App\Providers;
+
+use App\Models\SiteSetting;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\DB;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+//        $siteSettings  = \App\Models\SiteSetting::find(1);
+//        $categories    = DB::table('categories')->where('parent',0)->get();
+//        $subCategories = DB::table('categories')->where('parent','>',0)->get();
+//        $programs      = DB::table('programs')->where('category_id','>',0)->get();
+//        View::share('siteSettings',
+//            array(
+//                'siteSettings'=>$siteSettings,
+//                'categories'=>$categories,
+//                'subCategories'=>$subCategories,
+//                'programs'=>$programs
+//            ));
+
+        Schema::defaultStringLength(191);
+    }
+}
