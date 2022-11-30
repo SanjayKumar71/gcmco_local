@@ -61,19 +61,19 @@ class StripeController extends Controller
                 $totalMonth = 0;
             }
             else if($donationType == 'monthly'){
-                $endData = Carbon::now()->addDays(30);
+                $endData = Carbon::now()->addMonths(1);
                 $totalMonth = 1;
             }
             else if($donationType == 'quarterly'){
-                $endData = Carbon::now()->addDays(90);
+                $endData = Carbon::now()->addMonths(3);
                 $totalMonth = 3;
             }
             else if($donationType == 'semi annually'){
-                $endData = Carbon::now()->addDays(182);
+                $endData = Carbon::now()->addMonths(6);
                 $totalMonth = 6;
             }
             else if($donationType == 'yearly'){
-                $endData = Carbon::now()->addDays(365);
+                $endData = Carbon::now()->addMonths(12);
                 $totalMonth = 12;
             }
 
