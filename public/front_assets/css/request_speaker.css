@@ -1,0 +1,83 @@
+section.universal_sec {
+    background: linear-gradient(180deg, #428C9C52, #428C9C52),url(../img/where_most_needed/where_most_needbg.webp) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+section.request_speak_sec .form-group label {
+    display: block;
+    font-size: 18px;
+    float: none;
+    line-height: 1.3;
+    margin: 0 0 4px 0;
+    padding: 0;
+    color: #88858e;
+    font-family: "";
+    font-family: "roboto_b", Sans-serif;
+}
+/* section.request_speak_sec .button-group .btn {
+    background-color: #FF6D12;
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6s;
+    width: 100%;
+    font-family: "roboto_m";
+} */
+section.request_speak_sec .button-group .btn{
+    
+    background-color: #eee;
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 1em;
+    padding: 10px 15px;
+
+}
+section.request_speak_sec .button-group .btn:hover{
+    background-color: #2c2734;
+    color: #fff;
+}
+section.request_speak_sec {
+    padding: 5rem 0;
+}
+section.request_speak_sec  label.text_label {
+    display: block;
+    font-size: 13px;
+    float: none;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 4px 0 0;
+    padding: 0;
+    color: #88858e;
+    font-family: "rubik";
+}
+section.request_speak_sec label.form-check-label {
+    color: #88858e;
+    font-family: "rubik";
+    font-size: 18px;
+    vertical-align: baseline;
+    font-size: 19px;
+    font-weight: 100;
+    line-height: 1.3;
+}
+section.request_speak_sec .form-check {
+    margin: 1.5rem 0;
+}
+section.request_speak_sec  label {
+    display: block;
+    font-size: 18px;
+    float: none;
+    line-height: 1.3;
+    margin: 0 0 4px 0;
+    padding: 0;
+    color: #88858e;
+    font-family: "";
+    font-family: "roboto_b", Sans-serif;
+}
+.reqest_form select.form-control {
+    line-height: 40px;
+    border: 1px solid #00000052;
+    padding: 6px 14px;
+    margin: 2px 0px 0px 0px;
+    border-radius: 7px;
+    height: calc(3.5rem + 2px) !important;
+}

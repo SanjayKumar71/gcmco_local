@@ -25,7 +25,7 @@
 
 {{--Delete Modal--}}
 <div class="modal" id="globalDeleteModal" tabindex="-1" role="dialog" data-bs-toggle="modal">
-    <form method="post">
+    <form method="DELETE">
         @csrf
 
         <div class="modal-dialog" role="document">

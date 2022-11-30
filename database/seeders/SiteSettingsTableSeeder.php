@@ -21,18 +21,18 @@ class SiteSettingsTableSeeder extends Seeder
         }
 
         \DB::table('site_settings')->insert([
-            'site_title'       => 'Heed Way',
-            'contact_email'    => 'mailto:admin@heedway.com',
-            'contact_phone'    => '+44 7786 997137',
-            'address'          => 'lastminute.com London Eye, Riverside Building, County Hall, London SE1 7PB, United Kingdom',
-            'logo'             => '',
+            'site_title'       => 'GCMCO',
+            'contact_email'    => 'mailto:info@gcmco.com',
+            'contact_phone'    => '207-600-7770',
+            'address'          => '154 River Rd, Orrington, ME, 04474',
+            'logo'             => 'gcmco_logo.png',
             'facebook'         => 'https://www.facebook.com/',
             'instagram'        => 'https://www.instagram.com/',
             'twitter'          => 'https://twitter.com/',
             'youtube'          => 'https://www.youtube.com/',
             'footer_scripts'   => '',
-            'footer_sentence'  => 'Maecenas bibendum maximus blandit. Sed eget ornare mi. Donec hendrerit tincidunt lacus',
-            'copyright'        => 'Copyright by Heed Way. All rights reserved.',
+            'footer_sentence'  => 'GCMCO is a non-profit 501c3 organization to support those in need throughout Africa. While keeping the focus on Jesus Christ and His church.',
+            'copyright'        => 'Copyright 2021 by GCMCO',
             'created_at'       => date('Y-m-d H:i:s'),
             'updated_at'       => date('Y-m-d H:i:s')
         ]);

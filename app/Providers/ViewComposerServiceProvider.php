@@ -41,20 +41,109 @@ class ViewComposerServiceProvider extends ServiceProvider
         });
 
         /*
-         * Administrators
+         * Home Content
+         */
+        view()->composer('admin.home_content.index', function ($view) {
+            $view->with(['pageTitle' => 'Home Content']);
+        });
+
+        /*
+         * Campaign
+         */
+        view()->composer('admin.campaigns.index', function ($view) {
+            $view->with(['pageTitle' => 'Campaign List']);
+        });
+        view()->composer('admin.campaigns.create', function ($view) {
+            $view->with(['pageTitle' => 'Add Campaign File']);
+        });
+        view()->composer('admin.campaigns.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Campaign File']);
+        });
+        view()->composer('admin.campaigns.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit Campaign File']);
+        });
+
+        /*
+         * Donation Types
+         */
+        view()->composer('admin.donation_types.index', function ($view) {
+            $view->with(['pageTitle' => 'Donation Type List']);
+        });
+        view()->composer('admin.donation_types.create', function ($view) {
+            $view->with(['pageTitle' => 'Add Donation Type File']);
+        });
+        view()->composer('admin.donation_types.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Donation Type File']);
+        });
+        view()->composer('admin.donation_types.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit Donation Type File']);
+        });
+
+        /*
+         * Donation Amount
+         */
+        view()->composer('admin.donation_amount.index', function ($view) {
+            $view->with(['pageTitle' => 'Donation Amount List']);
+        });
+        view()->composer('admin.donation_amount.create', function ($view) {
+            $view->with(['pageTitle' => 'Add Donation Amount File']);
+        });
+        view()->composer('admin.donation_amount.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Donation Amount File']);
+        });
+        view()->composer('admin.donation_amount.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit Donation Amount File']);
+        });
+
+        /*
+         * Blogs
+         */
+        view()->composer('admin.blogs.index', function ($view) {
+            $view->with(['pageTitle' => 'Blogs List']);
+        });
+        view()->composer('admin.blogs.create', function ($view) {
+            $view->with(['pageTitle' => 'Add Blogs File']);
+        });
+        view()->composer('admin.blogs.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Blogs File']);
+        });
+        view()->composer('admin.blogs.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit Blogs File']);
+        });
+
+        /*
+         * Category
+         */
+        view()->composer('admin.category.index', function ($view) {
+            $view->with(['pageTitle' => 'Category List']);
+        });
+        view()->composer('admin.category.create', function ($view) {
+            $view->with(['pageTitle' => 'Add Category File']);
+        });
+        view()->composer('admin.category.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Category File']);
+        });
+        view()->composer('admin.category.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit Category File']);
+        });
+
+        /*
+         * Contact Queries
          */
         view()->composer('admin.contact_queries.index', function ($view) {
             $view->with(['pageTitle' => 'Contact Queries']);
         });
 
-        view()->composer('admin.bookings.index', function ($view) {
-            $view->with(['pageTitle' => 'Bookings Queries']);
+        /*
+         * Admin About Us
+         */
+        view()->composer('admin.about_us', function ($view) {
+            $view->with(['pageTitle' => 'About Us']);
         });
 
-
-
-
-
+        /*
+         * Administrators
+         */
         view()->composer('admin.administrators.index', function ($view) {
             $view->with(['pageTitle' => 'Admin Users List']);
         });
@@ -85,132 +174,41 @@ class ViewComposerServiceProvider extends ServiceProvider
         });
 
         /*
-         * Media File
+         * Users
          */
-        view()->composer('admin.blogs.index', function ($view) {
-            $view->with(['pageTitle' => 'Blogs List']);
+        view()->composer('admin.users.index', function ($view) {
+            $view->with(['pageTitle' => 'Users List']);
         });
-        view()->composer('admin.blogs.create', function ($view) {
-            $view->with(['pageTitle' => 'Add Blogs File']);
+        view()->composer('admin.users.create', function ($view) {
+            $view->with(['pageTitle' => 'Add User']);
         });
-        view()->composer('admin.blogs.show', function ($view) {
-            $view->with(['pageTitle' => 'Show Blogs File']);
+        view()->composer('admin.users.show', function ($view) {
+            $view->with(['pageTitle' => 'Show User']);
         });
-        view()->composer('admin.blogs.edit', function ($view) {
-            $view->with(['pageTitle' => 'Edit Blogs File']);
+        view()->composer('admin.users.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit User']);
         });
 
         /*
-         * events
+         * Newsletter
          */
-        view()->composer('admin.events.index', function ($view) {
-            $view->with(['pageTitle' => 'Blogs List']);
-        });
-        view()->composer('admin.events.create', function ($view) {
-            $view->with(['pageTitle' => 'Add Blogs File']);
-        });
-        view()->composer('admin.events.show', function ($view) {
-            $view->with(['pageTitle' => 'Show Blogs File']);
-        });
-        view()->composer('admin.events.edit', function ($view) {
-            $view->with(['pageTitle' => 'Edit Blogs File']);
+        view()->composer('admin.newsletter.index', function ($view) {
+            $view->with(['pageTitle' => 'Newsletter List']);
         });
 
         /*
-         * Category
+         * Site Setting
          */
-        view()->composer('admin.category.index', function ($view) {
-            $view->with(['pageTitle' => 'Category List']);
-        });
-        view()->composer('admin.category.create', function ($view) {
-            $view->with(['pageTitle' => 'Add Category File']);
-        });
-        view()->composer('admin.category.show', function ($view) {
-            $view->with(['pageTitle' => 'Show Category File']);
-        });
-        view()->composer('admin.category.edit', function ($view) {
-            $view->with(['pageTitle' => 'Edit Category File']);
-        });
-        
-        /*
-         * ProgramType
-         */
-        view()->composer('admin.program_type.index', function ($view) {
-            $view->with(['pageTitle' => 'Program_type List']);
-        });
-        view()->composer('admin.program_type.create', function ($view) {
-            $view->with(['pageTitle' => 'Add Program_type File']);
-        });
-        view()->composer('admin.program_type.show', function ($view) {
-            $view->with(['pageTitle' => 'Show Program_type File']);
-        });
-        view()->composer('admin.program_type.edit', function ($view) {
-            $view->with(['pageTitle' => 'Edit Program_type File']);
-        });
-        /*
-         * Programs
-         */
-        view()->composer('admin.programs.index', function ($view) {
-            $view->with(['pageTitle' => 'Programs List']);
-        });
-        view()->composer('admin.programs.create', function ($view) {
-            $view->with(['pageTitle' => 'Add Programs File']);
-        });
-        view()->composer('admin.programs.show', function ($view) {
-            $view->with(['pageTitle' => 'Show Programs File']);
-        });
-        view()->composer('admin.programs.edit', function ($view) {
-            $view->with(['pageTitle' => 'Edit Programs File']);
+        view()->composer('admin.siteSettings', function ($view) {
+            $view->with(['pageTitle' => 'Site Settings']);
         });
 
         /*
-         * Programs Session
+         * Change Password
          */
-        view()->composer('admin.program_session.index', function ($view) {
-            $view->with(['pageTitle' => 'Program Session List']);
+        view()->composer('admin.users.changePassword', function ($view) {
+            $view->with(['pageTitle' => 'Change Password']);
         });
-        view()->composer('admin.program_session.create', function ($view) {
-            $view->with(['pageTitle' => 'Add Program Session File']);
-        });
-        view()->composer('admin.program_session.show', function ($view) {
-            $view->with(['pageTitle' => 'Show Program Session File']);
-        });
-        view()->composer('admin.program_session.edit', function ($view) {
-            $view->with(['pageTitle' => 'Edit Program Session File']);
-        });
-
-        /*
-         * User Documents
-         */
-        view()->composer('admin.user_documents.index', function ($view) {
-            $view->with(['pageTitle' => 'User Documents List']);
-        });
-        view()->composer('admin.user_documents.create', function ($view) {
-            $view->with(['pageTitle' => 'Add User Documents File']);
-        });
-        view()->composer('admin.user_documents.show', function ($view) {
-            $view->with(['pageTitle' => 'Show User Documents File']);
-        });
-        view()->composer('admin.user_documents.edit', function ($view) {
-            $view->with(['pageTitle' => 'Edit User Documents File']);
-        });
-
-        /*
-         * success_stories
-         */
-        view()->composer('admin.success_stories.index', function ($view) {
-            $view->with(['pageTitle' => 'Success Story List']);
-        });
-        view()->composer('admin.success_stories.create', function ($view) {
-            $view->with(['pageTitle' => 'Add Success Story File']);
-        });
-        view()->composer('admin.success_stories.show', function ($view) {
-            $view->with(['pageTitle' => 'Show Success Story File']);
-        });
-        view()->composer('admin.success_stories.edit', function ($view) {
-            $view->with(['pageTitle' => 'Edit Success Story File']);
-        });
-
 
         /*
          * Permissions
@@ -230,22 +228,6 @@ class ViewComposerServiceProvider extends ServiceProvider
 
 
         /*
-         * testimonials
-         */
-        view()->composer('admin.testimonials.index', function ($view) {
-            $view->with(['pageTitle' => 'testimonials List']);
-        });
-        view()->composer('admin.testimonials.create', function ($view) {
-            $view->with(['pageTitle' => 'Add testimonials']);
-        });
-        view()->composer('admin.testimonials.show', function ($view) {
-            $view->with(['pageTitle' => 'Show testimonials']);
-        });
-        view()->composer('admin.testimonials.edit', function ($view) {
-            $view->with(['pageTitle' => 'Edit testimonials']);
-        });
-
-        /*
          * Roles
          */
         view()->composer('admin.roles.index', function ($view) {
@@ -259,113 +241,6 @@ class ViewComposerServiceProvider extends ServiceProvider
         });
         view()->composer('admin.roles.edit', function ($view) {
             $view->with(['pageTitle' => 'Edit Role']);
-        });
-
-
-        /*
-         * Users
-         */
-        view()->composer('admin.users.index', function ($view) {
-            $view->with(['pageTitle' => 'Users List']);
-        });
-        view()->composer('admin.users.create', function ($view) {
-            $view->with(['pageTitle' => 'Add User']);
-        });
-        view()->composer('admin.users.show', function ($view) {
-            $view->with(['pageTitle' => 'Show User']);
-        });
-        view()->composer('admin.users.edit', function ($view) {
-            $view->with(['pageTitle' => 'Edit User']);
-        });
-
-        /*
-         * Site Setting
-         */
-        view()->composer('admin.siteSettings', function ($view) {
-            $view->with(['pageTitle' => 'Site Settings']);
-        });
-
-        //home content
-        view()->composer('admin.home_content.index', function ($view) {
-            $view->with(['pageTitle' => 'Home Content']);
-        });
-
-        /*
-         * Home Section Three
-         */
-        view()->composer('admin.home_section_three.index', function ($view) {
-            $view->with(['pageTitle' => 'Home Section Three List']);
-        });
-        view()->composer('admin.home_section_three.create', function ($view) {
-            $view->with(['pageTitle' => 'Add Home Section Three']);
-        });
-        view()->composer('admin.home_section_three.show', function ($view) {
-            $view->with(['pageTitle' => 'Show Home Section Three']);
-        });
-        view()->composer('admin.home_section_three.edit', function ($view) {
-            $view->with(['pageTitle' => 'Edit Home Section Three']);
-        });
-
-        /*
-         * Partnership Affiliation
-         */
-        view()->composer('admin.partnership_affiliation.index', function ($view) {
-            $view->with(['pageTitle' => 'Partnership And Affiliation List']);
-        });
-        view()->composer('admin.partnership_affiliation.create', function ($view) {
-            $view->with(['pageTitle' => 'Add Partnership And Affiliation']);
-        });
-        view()->composer('admin.partnership_affiliation.show', function ($view) {
-            $view->with(['pageTitle' => 'Show Partnership And Affiliation']);
-        });
-        view()->composer('admin.partnership_affiliation.edit', function ($view) {
-            $view->with(['pageTitle' => 'Edit Partnership And Affiliation']);
-        });
-
-        /*
-         * Admin About Us
-         */
-        view()->composer('admin.about_us', function ($view) {
-            $view->with(['pageTitle' => 'About Us']);
-        });
-        
-        /*
-         * About Us Program Section
-         */
-        view()->composer('admin.about_us_program_section.index', function ($view) {
-            $view->with(['pageTitle' => 'About Us Program Section List']);
-        });
-        view()->composer('admin.about_us_program_section.create', function ($view) {
-            $view->with(['pageTitle' => 'Add About Us Program Section']);
-        });
-        view()->composer('admin.about_us_program_section.show', function ($view) {
-            $view->with(['pageTitle' => 'Show About Us Program Section']);
-        });
-        view()->composer('admin.about_us_program_section.edit', function ($view) {
-            $view->with(['pageTitle' => 'Edit About Us Program Section']);
-        });
-
-        /*
-         * Newsletter
-         */
-        view()->composer('admin.newsletter.index', function ($view) {
-            $view->with(['pageTitle' => 'Newsletter List']);
-        });
-
-        //WORK WITH ME
-        view()->composer('admin.work_with_me.index', function ($view) {
-            $view->with(['pageTitle' => 'Work with me']);
-        });
-        //        Help
-        view()->composer('admin.help.index', function ($view) {
-            $view->with(['pageTitle' => 'Help']);
-        });
-
-        /*
-         * Change Password
-         */
-        view()->composer('admin.users.changePassword', function ($view) {
-            $view->with(['pageTitle' => 'Change Password']);
         });
 
 

@@ -1,0 +1,8 @@
+section.universal_sec {
+    background: linear-gradient(180deg, #428C9C52, #428C9C52),url(../img/newsarticle/newarticlebg.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.news_article_sec {
+    padding: 2rem 0 6rem;
+}

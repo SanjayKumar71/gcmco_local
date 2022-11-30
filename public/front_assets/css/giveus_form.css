@@ -1,0 +1,11 @@
+section.universal_sec {
+    background: linear-gradient(180deg, #428C9C52, transparent),url(../img/giveus_form.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+section.giveus_form_page .black_select {
+    display: block;
+}
+section.giveus_form_page section.where_most_sec .boxx {
+    padding: 20px 60px;
+}

@@ -1,175 +1,238 @@
-@php use \App\Http\Controllers\Front\ProgramsController; @endphp
 <!-- Header Start Here -->
-<header id="header-top">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-3 col-4">
-                <div class="logoDv">
-                    <a href="{{ route('index') }}">
-                        @if (isset($siteSettings['siteSettings']->logo) && $siteSettings['siteSettings']->logo != '')
-                            <figure><img src="{!! asset(uploadsDir().$siteSettings['siteSettings']->logo) !!}" alt="Web Builder" class="img-fluid" /></figure>
-                        @else
-                            <figure><img src="{{ asset('front_assets/img/heedway-logo.png') }}" class="img-fluid"></figure>
-                        @endif
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-7 col-1">
-                <div class="navbar_menus">
-                    <ul class="menus">
-                        <li class="menu-items"><a href="{{ route('index') }}">Home</a></li>
-                        <li class="menu-items"><a href="{{ route('about-us') }}">About Us</a></li>
-                        <li class="menu-items">
-                            <button class="megamenu">
-                                Programs
-                            </button>
-                        </li>
-                        <li class="menu-items"><a href="{{ route('contact-us') }}">Contact Us</a></li>
-                        @auth<li class="menu-items"><a href="{{ route('account') }}">Account</a></li>@endauth
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-2 col-7">
-                <div class="right_menus">
-                    <ul class="action_links">
-                        @auth
-                            <li class="menu-items">
-                                <a href="{{ route('logout') }}" class="btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="19.163" height="22.987" viewBox="0 0 19.163 22.987">
-                                            <g id="Group_9040" data-name="Group 9040" transform="translate(-789.395 -335.809)">
-                                                <path id="Path_38103" data-name="Path 38103" d="M792.938,545.282c-.261-.054-.526-.094-.782-.166a3.6,3.6,0,0,1-2.746-3.444,12.27,12.27,0,0,1,.8-5.191,4.768,4.768,0,0,1,2.13-2.57,4.2,4.2,0,0,1,2.091-.5,1.611,1.611,0,0,1,.687.237c.341.185.656.415.987.62a5.109,5.109,0,0,0,5.767,0c.267-.165.539-.325.79-.513a1.912,1.912,0,0,1,1.512-.307,4.258,4.258,0,0,1,3.254,2.339,9.607,9.607,0,0,1,1.046,3.728,18.541,18.541,0,0,1,.088,2.015,3.676,3.676,0,0,1-3.4,3.718.884.884,0,0,0-.146.042Z"
-                                                    transform="translate(0 -186.486)" fill="#fff" />
-                                                <path id="Path_38104" data-name="Path 38104" d="M869.836,341.337a5.54,5.54,0,1,1-5.565-5.527A5.558,5.558,0,0,1,869.836,341.337Z"
-                                                    transform="translate(-65.461)" fill="#fff" />
-                                            </g>
-                                    </svg>
-                                    Logout
-                                </a>
-                            </li>
-                            @else
-                            <li class="menu-items">
-                                <a href="{{ route('sign-in') }}" class="btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="19.163" height="22.987" viewBox="0 0 19.163 22.987">
-                                            <g id="Group_9040" data-name="Group 9040" transform="translate(-789.395 -335.809)">
-                                                <path id="Path_38103" data-name="Path 38103" d="M792.938,545.282c-.261-.054-.526-.094-.782-.166a3.6,3.6,0,0,1-2.746-3.444,12.27,12.27,0,0,1,.8-5.191,4.768,4.768,0,0,1,2.13-2.57,4.2,4.2,0,0,1,2.091-.5,1.611,1.611,0,0,1,.687.237c.341.185.656.415.987.62a5.109,5.109,0,0,0,5.767,0c.267-.165.539-.325.79-.513a1.912,1.912,0,0,1,1.512-.307,4.258,4.258,0,0,1,3.254,2.339,9.607,9.607,0,0,1,1.046,3.728,18.541,18.541,0,0,1,.088,2.015,3.676,3.676,0,0,1-3.4,3.718.884.884,0,0,0-.146.042Z"
-                                                    transform="translate(0 -186.486)" fill="#fff" />
-                                                <path id="Path_38104" data-name="Path 38104" d="M869.836,341.337a5.54,5.54,0,1,1-5.565-5.527A5.558,5.558,0,0,1,869.836,341.337Z"
-                                                    transform="translate(-65.461)" fill="#fff" />
-                                            </g>
-                                    </svg>
-                                    Sign In
-                                </a>
-                            </li>
-                        @endauth
-                    </ul>
-                    <div class="canvas_btn">
-                        <i class="fa fa-bars" aria-hidden="true"></i>
+<header id="headerTop">
+
+    <div class="top_header">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="tophead_left">
+                        <div class="tophead_content">
+                            <i class="fa fa-phone"></i>
+                            <span>{{ $siteSettings['siteSettings']->contact_phone }}</span>
+                        </div>
+                        <div class="tophead_content">
+                            <i class="fas fa-mail-bulk"></i>
+                            <span>{{ $siteSettings['siteSettings']->contact_email }}</span>
+                        </div>
                     </div>
                 </div>
+
+                <div class="col-md-5"></div>
+
+                <div class="col-md-3 text-right">
+                    <div class="tophead_social">
+                        <a href="{{ $siteSettings['siteSettings']->facebook }}" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="{{ $siteSettings['siteSettings']->twitter }}" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="{{ $siteSettings['siteSettings']->instagram }}" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
+
+    <div class="main_header" id="mainsecondheader">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <div class="header_logo_dv">
+                        <a href="{{ route('index') }}">
+                            <figure>
+                                @if( isset( $siteSettings['siteSettings']->logo ) && $siteSettings['siteSettings']->logo != '' )
+                                    <img src="{!! asset(uploadsDir().$siteSettings['siteSettings']->logo) !!}" class="img-fluid" alt="">
+                                    @else
+                                        <img src="{{ asset('front_assets/img/home/gcmco_logo.png') }}" class="img-fluid" alt="">
+                                @endif
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8 align-self-center">
+                    <div class="navbar_menus">
+                        <ul class="menus">
+                            <li class="menu-items"><a class="menu_anc" href="{{ route('index') }}">Home</a></li>
+                            <li class="menu-items">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        id="dropdownMenuButton1">
+                                        About
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item the_drop_menu" href="{{ route('history') }}">History</a></li>
+                                        <li><a class="dropdown-item the_drop_menu" href="{{ route('gcm_team') }}">GCM TEAM</a></li>
+                                        <li><a class="dropdown-item the_drop_menu"
+                                                href="{{ route('statement_of_faith') }}">Statement Of
+                                                Faith</a></li>
+                                        <li><a class="dropdown-item the_drop_menu" href="{{ route('who_we_are') }}">Who We Are</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="menu-items"><a class="menu_anc" href="{{ route('give') }}">Give</a></li>
+                            <li class="menu-items"><a class="menu_anc" href="{{ route('sponsor') }}">Sponsor</a></li>
+                            <li class="menu-items"><a class="" href="#"></a>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        id="dropdownMenuButton1">
+                                        Media
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item the_drop_menu" href="{{ route('news_article') }}">News &
+                                                Articles</a></li>
+                                        <li><a class="dropdown-item the_drop_menu" href="{{ route('gallery') }}">Photo Gallery</a>
+                                        </li>
+                                        <li><a class="dropdown-item the_drop_menu" href="{{ route('video') }}">Videos</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- <li class="menu-items"><a href="premium-product.php">Get Involved</a></li> -->
+                            <li class="menu-items">
+                                <div class="dropdown">
+                                    <button onclick="window.location.href='get_involved.php'"
+                                        class="btn btn-secondary dropdown-toggle" type="button"
+                                        id="dropdownMenuButton1">
+                                        Get Involved
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li><a class="dropdown-item the_drop_menu" href="{{ route('where_most_needed') }}">Where
+                                                Most Needed</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item the_drop_menu" href="{{ route('women_distress') }}">Women in
+                                                Distress</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item the_drop_menu" href="{{ route('hungary_kid') }}">Hungry Kids
+                                                program</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item the_drop_menu" href="{{ route('women_distress') }}">Drill A
+                                                Well</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item the_drop_menu" href="{{ route('hungary_kid') }}">Hope Homes</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item the_drop_menu" href="{{ route('women_distress') }}">
+                                                Sponsor a Missionary &raquo;
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-submenu">
+                                                <li>
+                                                    <a class="dropdown-item the_drop_menu"
+                                                        href="{{ route('hungary_kid') }}">Lawrence Family</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item the_drop_menu"
+                                                        href="{{ route('women_distress') }}">Peter Odoyo</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item the_drop_menu" href="{{ route('hungary_kid') }}">Joseph
+                                                        Okoth</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item the_drop_menu"
+                                                        href="{{ route('women_distress') }}">Preston Jumba</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item the_drop_menu"
+                                                        href="{{ route('hungary_kid') }}">Lindenberg Family</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item the_drop_menu"
+                                                        href="{{ route('women_distress') }}">Daniel Balume</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item the_drop_menu" href="{{ route('hungary_kid') }}">Vivian
+                                                        Mutai</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- <li class="menu-items"><a href="contact.php">Contact</a></li> -->
+                            <li class="menu-items">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        id="dropdownMenuButton1">
+                                        Contact
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item the_drop_menu"
+                                                href="{{ route('contact_information') }}">Contact
+                                                Information</a></li>
+                                        <li><a class="dropdown-item the_drop_menu" href="{{ route('request_speaker') }}">Request a
+                                                Speaker</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li><button data-bs-toggle="modal" data-bs-target="#headermodal"><i
+                                        class="fa fa-search"></i></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-1 align-self-center">
+                    <div class="header_right">
+                        <a href="{{ route('where_most_needed') }}" class="btn gcmco-btn">Give</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </header>
+<div class="open-accessibility-text"></div>
 <!-- Header End Here -->
 
-<!-- Go To Top Button -->
-<!-- <div class="go_to_top">
-    <a href="#header-top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-</div> -->
-<!-- Go To Top Button -->
-
 <!-- Mobile Header Start Here -->
-<div class="mobile_header">
+<!-- <div class="mobile_header">
     <div class="cancel">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#000" class="bi bi-x" viewBox="0 0 16 16">
-            <path
-                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
         </svg>
     </div>
     <ul class="mobile_menus">
-        <li class="menu_items"><a class="menu_links active_menu" href="{{ route('index') }}">Home</a></li>
-        <li class="menu_items"><a class="menu_links" href="{{ route('about-us') }}">About</a></li>
-        <li class="menu_items"><a class="menu_links" href="{{ route('contact-us') }}">Contact</a></li>
+        <li class="menu_items"><a class="menu_links active_menu" href="shop.php">All Plants</a></li>
+        <li class="menu_items"><a class="menu_links" href="premium-product.php">Others plants</a></li>
+        <li class="menu_items"><a class="menu_links" href="nutrients.php">Nutrients & Additives</a></li>
+        <li class="menu_items"><a class="menu_links" href="kigi-birds.php">Kigi Birds</a></li>
+        <li class="menu_items"><a class="menu_links" href="planting-mixes.php">Planting Mixes</a></li>
+        <li class="menu_items"><a class="menu_links" href="shop.php">Products</a></li>
+        <li class="menu_items"><a class="menu_links" href="campaign.php">Donate</a></li>
+        <li class="menu_items"><a class="menu_links" href="contact.php">Contact Us</a></li>
     </ul>
-</div>
+</div> -->
 <!-- Mobile Header End Here -->
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
 
-<!-- Mega Menu Start Here -->
-<div class="mega-menu">
-    <div class="container">
-        <div class="row">
-
-            @php
-                $cats     = $siteSettings['categories'];
-                $subCats  = $siteSettings['subCategories'];
-                $programs = $siteSettings['programs'];
-            @endphp
-
-            @if(isset($cats) && $cats != '')
-                @foreach($cats as $cat)
-                 
-                    <div class="col-lg-4">
-                        <div class="menu-box">
-                            
-                            <div class="title">
-                                <h5>{{$cat->title}}</h5>
-                            </div>
-                            
-                            @if(isset($programs) && count($programs))
-                                <ul class="menus">
-                                    @foreach($programs as $program)
-                                        @if($program->category_id == $cat->id)
-                                            <li class="menu-items"><a href="{{ route('program-detail',['programId' => $program->id ]) }}">{{ $program->title }}</a></li>
-                                        @endif
-                                    @endforeach
-                            @endif
-
-                            @if(isset($subCats) && $subCats != '')
-                                    @php $count = 0; @endphp
-                                    @foreach($subCats as $subCat)
-                                        @if($subCat->parent == $cat->id)
-                                            <li class="menu-items inner-items">
-                                                <button class="for-inner{{ ++$count }}">{{ $subCat->title }}</button>
-                                            </li>
-                                        @endif
-                                    @endforeach
-                                </ul>
-                            @endif
-                        </div>
+<!-- Modal -->
+<div class=" search_ico_modal modal fade" id="headermodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="btn-close btn" data-bs-dismiss="modal" aria-label="Close">X</button>
+            </div> -->
+            <div class="modal-body">
+            <span class="btn_close icon_close" data-bs-dismiss="modal" aria-label="Close"></span>
+                <div class="container">
+                    <div class="form-group">
+                        <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+                        <button type="button" class="btn btn-outline-primary">search</button>
                     </div>
-                @endforeach
-
-                <div class="col-lg-4">
-                    
-                    @if(isset($subCats) && $subCats != '')
-                        @php $countProgarm = 0; @endphp
-
-                        @foreach($subCats as $subCat)
-                            @php $countProgarm++ @endphp
-                            @if(isset($programs) && count($programs))
-                                @if($countProgarm > 1)
-                                    <div class="menu-box inner-menus{{ $countProgarm }}">
-                                    @else
-                                        <div class="menu-box inner-menus">
-                                @endif
-                                    <ul class="menus">
-                                        @foreach($programs as $program)
-                                            @if($program->category_id == $subCat->id)
-                                                <li class="menu-items"><a href="{{ route('program-detail',['programId' => $program->id ]) }}">{{ $program->title }}</a></li>
-                                            @endif
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
-
-                        @endforeach
-
-                    @endif
-
                 </div>
-
-            @endif
+            </div>
         </div>
     </div>
 </div>
-<!-- Mega Menu End Here -->

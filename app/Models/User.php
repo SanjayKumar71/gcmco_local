@@ -40,11 +40,6 @@ class User extends Authenticatable
             ->get();
     }
 
-    public function user_documents()
-    {
-        return $this->hasMany(UserDocument::class, 'user_id');
-    }
-
     public function cards()
     {
         return $this->hasMany(UserCard::class, 'user_id', 'id');

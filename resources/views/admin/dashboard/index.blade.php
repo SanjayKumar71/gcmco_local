@@ -3,7 +3,8 @@
 @section('content')
     @include('admin.layouts.partials.overview')
     <div class="container-fluid">
-        <div class="row ">
+        
+    <div class="row ">
             <div class="col-12 col-lg-4 col-xl">
                 <!-- Value  -->
                 <div class="card">
@@ -89,6 +90,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-4">
                 <!-- Value  -->
@@ -229,59 +231,7 @@
                             </tr>
                             </thead>
                             <tbody class="list">
-{{--                            @foreach($jobs as $k=>$v)--}}
-{{--                                <tr>--}}
-{{--                                    <td class="goal-user">--}}
-{{--                                        <a href="{{ route('admin.user.show', $v->id) }}">--}}
-{{--                                            {{ (!empty($v->user))? $v->user->first_name.' '.$v->user->last_name : 'none' }}--}}
-{{--                                        </a>--}}
-{{--                                    </td>--}}
-{{--                                    <td class="goal-fixer">--}}
-{{--                                        <a href="{{ route('admin.fixer.show', $v->id) }}">--}}
-{{--                                            {{ (!empty($v->fixer))? $v->fixer->first_name.' '.$v->fixer->last_name : 'none' }}--}}
-{{--                                        </a>--}}
-{{--                                    </td>--}}
-{{--                                    <td class="goal-jobType">--}}
-{{--                                        {{ (!empty($v->jobType))? $v->jobType->name : 'none' }}--}}
-{{--                                    </td>--}}
-{{--                                    <td class="goal-status">--}}
-{{--                                        @if($v->status == "PENDING")--}}
-{{--                                            <span class="text-dark">●</span>--}}
-{{--                                        @elseif($v->status == "CANCELED")--}}
-{{--                                            <span class="text-danger">●</span>--}}
-{{--                                        @elseif($v->status == "ONGOING")--}}
-{{--                                            <span class="text-primary">●</span>--}}
-{{--                                        @elseif($v->status == "STARTED")--}}
-{{--                                            <span class="text-success">●</span>--}}
-{{--                                        @elseif($v->status == "END")--}}
-{{--                                            <span class="text-secondary">●</span>--}}
-{{--                                        @elseif($v->status == "APPROVED")--}}
-{{--                                            <span class="text-black">●</span>--}}
-{{--                                        @endif--}}
-{{--                                        {{ $v->status }}--}}
-{{--                                    </td>--}}
-{{--                                    <td class="goal-progress">--}}
-{{--                                        @if($v->status == "PAID")--}}
-{{--                                            <span class="text-success">●</span>--}}
-{{--                                        @elseif($v->status == "UNPAID")--}}
-{{--                                            <span class="text-dark">●</span>--}}
-{{--                                        @endif--}}
-{{--                                        {{ $v->amount_status }}--}}
-{{--                                    </td>--}}
-{{--                                    <td class="goal-date">--}}
-{{--                                        <time datetime="2018-10-24">--}}
-{{--                                            {{ date('Y-m-d',strtotime($v->date)) }} | {{ date('H:i A',strtotime($v->time)) }}--}}
-{{--                                        </time>--}}
-{{--                                    </td>--}}
-{{--                                    <td class="text-end">--}}
-{{--                                        <a href="{{ route('admin.jobs.show', $v->id) }}" class="btn btn-success btn-sm small">--}}
-{{--                                            <i class="fe fe-eye"></i>--}}
-{{--                                        </a>--}}
-{{--                                    </td>--}}
-{{--                                    <td class="text-end">--}}
-{{--                                    </td>--}}
-{{--                                </tr>--}}
-{{--                            @endforeach--}}
+
                             </tbody>
                         </table>
                     </div>

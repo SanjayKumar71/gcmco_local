@@ -28,17 +28,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-//        $siteSettings  = \App\Models\SiteSetting::find(1);
-//        $categories    = DB::table('categories')->where('parent',0)->get();
-//        $subCategories = DB::table('categories')->where('parent','>',0)->get();
-//        $programs      = DB::table('programs')->where('category_id','>',0)->get();
-//        View::share('siteSettings',
-//            array(
-//                'siteSettings'=>$siteSettings,
-//                'categories'=>$categories,
-//                'subCategories'=>$subCategories,
-//                'programs'=>$programs
-//            ));
+       $siteSettings  = \App\Models\SiteSetting::find(1);
+       $campaigns     = \App\Models\Campaign::get();
+       View::share('siteSettings',
+           array(
+               'siteSettings'=>$siteSettings,
+               'campaigns'=>$campaigns
+           ));
 
         Schema::defaultStringLength(191);
     }

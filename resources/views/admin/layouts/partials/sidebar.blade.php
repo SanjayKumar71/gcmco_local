@@ -99,68 +99,68 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link " href="">
                         <i class="fe fe-user-plus"></i> Fixer List
                     </a>
-                </li>
+                </li> -->
 
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link " href="">
                         <i class="fe fe-layers"></i> Category
                     </a>
-                </li>
+                </li> -->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link " href="">
                         <i class="fe fe-list"></i> Product
                     </a>
-                </li>
+                </li> -->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link " href="">
                         <i class="fe fe-menu"></i> Services
                     </a>
-                </li>
+                </li> -->
 
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link " href="">
                         <i class="fe fe-radio"></i> Jobs
                     </a>
-                </li>
+                </li> -->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link " href="">
                         <i class="fe fe-mail"></i> News Letter
                     </a>
-                </li>
+                </li> -->
 
                 <li class="nav-item">
-                    <a class="nav-link " href="">
+                    <a class="nav-link " href="{{ route('admin.contact_queries.index') }}">
                         <i class="fe fe-at-sign"></i> Contact Us
                     </a>
                 </li>
 
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link " href="">
                         <i class="fe fe-activity"></i> Client Review
                     </a>
-                </li>
+                </li> -->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link " href="">
                         <i class="fe fe-award"></i> Social Linking
                     </a>
-                </li>
+                </li> -->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link " href="">
                         <i class="fe fe-align-right"></i> Faqs
                     </a>
-                </li>
+                </li> -->
 
                 <li class="nav-item">
                     <a class="nav-link " href="">
@@ -197,28 +197,23 @@
                 </form>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link"href="">
+                        <a class="nav-link" href="{{ route('admin.home_content.index') }}">
                             Home
                         </a>
                     </li>
-                    <li class="nav-item"  >
-                        <a  class="nav-link"href="">
-                            Services
+                    <li class="nav-item">
+                        <a  class="nav-link" href="{{ route('admin.campaigns.index') }}">
+                            Campaigns
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a  class="nav-link"href="" >
-                            Sustainibility
+                        <a  class="nav-link" href="{{ route('admin.donation_types.index') }}">
+                            Donation Types
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link ">
-                            Safety
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link ">
-                            Company
+                        <a  class="nav-link" href="{{ route('admin.donation_amount.index') }}">
+                            Donation Amount
                         </a>
                     </li>
                     <li class="nav-item">

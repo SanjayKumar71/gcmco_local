@@ -1,0 +1,22 @@
+section.universal_sec {
+    background: linear-gradient(180deg, #428C9C52, #428C9C52),url(../img/get_involved/getinvolved.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.para_txt {
+    color: #88858e;
+    font-family: "roboto_m", Sans-serif;
+}
+h4.orange_heading {
+    color: #ff6d12;
+    line-height: 40px;
+    font-family: 'roboto_b';
+    font-size: 40px;
+    margin-bottom: 2rem;
+}
+section.get_involved_page section.help_people_sec {
+    padding: 3rem 0;
+}
+section.getinvolved_sec {
+    padding-bottom: 2rem;
+}

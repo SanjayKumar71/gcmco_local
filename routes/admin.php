@@ -52,29 +52,19 @@ Route::name('admin.')->group(
         ]);
 
 //        Route::middleware(['permission'])->group(function () {
-            Route::resource('administrators', 'AdministratorsController');
-            Route::resource('pages', 'PagesController');
-            Route::resource('blogs', 'BlogsController');
-            Route::resource('events', 'EventsController');
-            Route::resource('category', 'CategoryController');
-            Route::resource('program_type', 'ProgramTypeController');
-            Route::resource('programs', 'ProgramsController');
-            Route::resource('program_session', 'ProgramSessionController');
-            Route::resource('user_documents', 'UserDocumentController');
-            Route::resource('success_stories', 'SuccessStoryController');
-            Route::resource('site-settings', 'SiteSettingsController');
-            Route::resource('users', 'UsersController');
-            Route::resource('contact_queries', 'ContactController');
-            Route::resource('bookings', 'BookingController');
-            Route::resource('testimonials', 'TestimonialsController');
             Route::resource('home_content', 'HomeController');
-            Route::resource('home_section_three', 'HomeSectionThreeController');
+            // Route::resource('blogs', 'BlogsController');
+            Route::resource('category', 'CategoryController');
+            Route::resource('contact_queries', 'ContactController');
             Route::resource('about_us', 'AboutUsController');
-            Route::resource('about_us_program_section', 'AboutUsProgramSectionController');
-            Route::resource('work_with_me', 'WorkWithMeController');
-            Route::resource('help', 'HelpsController');
+            Route::resource('administrators', 'AdministratorsController');
+            Route::resource('campaigns', 'CampaignController');
+            Route::resource('donation_types', 'DonationTypeController');
+            Route::resource('donation_amount', 'DonationAmountController');
+            Route::resource('pages', 'PagesController');
+            Route::resource('users', 'UsersController');
             Route::resource('newsletter', 'NewsletterController');
-            Route::resource('partnership_affiliation', 'PartnershipAffiliationController');
+            Route::resource('site-settings', 'SiteSettingsController');
 //        });
 
         # To show change password form

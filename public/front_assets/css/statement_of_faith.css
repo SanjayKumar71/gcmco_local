@@ -1,0 +1,30 @@
+
+section.universal_sec {
+    background: linear-gradient(180deg, #428C9C52, #428C9C52),url(../img/statementoffaith/statemenfaithbg.webp) no-repeat;
+    background-size: cover;
+}
+.state_faith_content h2 {
+    color: #ff6d12;
+    font-family: "roboto_b", Sans-serif;
+    font-size: 50px;
+}
+.state_faith_content ul {
+    list-style: auto;
+    padding-left: 1rem;
+}
+.state_faith_content .para_txt {
+    font-family: "roboto_r", Sans-serif;
+    font-weight: 500;
+    /* margin: 0px 0px -20px 0px; */
+    font-size: 18px;
+    line-height: 34px;
+    color: #88858e;
+}
+section.state_faith_sec {
+    padding: 4rem 0;
+}
+@media(max-width:1199px){
+    .state_faith_content h2{
+        font-size: 40px;
+    }
+}

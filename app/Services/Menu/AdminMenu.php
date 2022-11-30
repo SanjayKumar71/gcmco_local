@@ -28,114 +28,64 @@ class AdminMenu
                 '<i class="fa fa-home"></i> <span class="title">Home Content</span>'
             ));
 
-            $menu = $menu->add(Link::toRoute(
-                'admin.home_section_three.index',
-                '<i class="fa fa-home"></i> <span class="title">Home Section Three</span>'
-            )->addParentClass('start'));
+            // $menu = $menu->add(Link::toRoute(
+            //     'admin.blogs.index',
+            //     '<i class="fa fa-file"></i> <span class="title">Blogs</span>'
+            // ));
 
             $menu = $menu->add(Link::toRoute(
-                'admin.partnership_affiliation.index',
-                '<i class="fa fa-home"></i> <span class="title">Partnership Affiliation</span>'
-            )->addParentClass('start'));
+                'admin.category.index',
+                '<i class="fa fa-file"></i> <span class="title">Category</span>'
+            ));
+
+            $menu = $menu->add(Link::toRoute(
+                'admin.contact_queries.index',
+                '<i class="fa fa-file"></i> <span class="title">Contact Queries</span>'
+            ));
 
             $menu = $menu->add(Link::toRoute(
                 'admin.about_us.index',
                 '<i class="fa fa-home"></i> <span class="title">About Us</span>'
             ));
 
-            $menu = $menu->add(Link::toRoute(
-                'admin.about_us_program_section.index',
-                '<i class="fa fa-home"></i> <span class="title">About Us Program Section</span>'
-            )->addParentClass('start'));
+            //$menu = $menu->add(Link::toRoute(
+            //    'admin.administrators.index',
+            //    '<i class="fa fa-user"></i> <span class="title">Admin Users</span>'
+            //));
             
-            // $menu = $menu->add(Link::toRoute(
-            //     'admin.work_with_me.index',
-            //     '<i class="fa fa-file"></i> <span class="title">Work With Me</span>'
-            // )->addParentClass('start'));
+            $menu = $menu->add(Link::toRoute(
+                'admin.campaigns.index',
+                '<i class="fa fa-th"></i> <span class="title">Campaigns</span>'
+            ));
 
-            // $menu = $menu->add(Link::toRoute(
-            //     'admin.blogs.index',
-            //     '<i class="fa fa-file"></i> <span class="title">Blogs</span>'
-            // ));
-            // $menu = $menu->add(Link::toRoute(
-            //     'admin.events.index',
-            //     '<i class="fa fa-file"></i> <span class="title">Live Events</span>'
-            // ));
-            
             $menu = $menu->add(Link::toRoute(
-                'admin.category.index',
-                '<i class="fa fa-file"></i> <span class="title">Category</span>'
+                'admin.donation_types.index',
+                '<i class="fa fa-th"></i> <span class="title">Donation Types</span>'
             ));
-            
-            $menu = $menu->add(Link::toRoute(
-                'admin.program_type.index',
-                '<i class="fa fa-file"></i> <span class="title">Program Type</span>'
-            ));
-            
-            $menu = $menu->add(Link::toRoute(
-                'admin.programs.index',
-                '<i class="fa fa-file"></i> <span class="title">Programs</span>'
-            ));
-            
-            $menu = $menu->add(Link::toRoute(
-                'admin.program_session.index',
-                '<i class="fa fa-file"></i> <span class="title">Program Session</span>'
-            ));
-            
-            // $menu = $menu->add(Link::toRoute(
-            //     'admin.success_stories.index',
-            //     '<i class="fa fa-file"></i> <span class="title">Success Stories</span>'
-            // ));
-            
-            $menu = $menu->add(Link::toRoute(
-                'admin.contact_queries.index',
-                '<i class="fa fa-file"></i> <span class="title">Contact Queries</span>'
-            ));
-            
-            $menu = $menu->add(Link::toRoute(
-                'admin.bookings.index',
-                '<i class="fa fa-file"></i> <span class="title">Bookings</span>'
-            ));
-            
-            $menu = $menu->add(Link::toRoute(
-                'admin.user_documents.index',
-                '<i class="fa fa-file"></i> <span class="title">User Documents</span>'
-            ));
-            
-            // $menu = $menu->add(Link::toRoute(
-            //     'admin.testimonials.index',
-            //     '<i class="fa fa-file"></i> <span class="title">Testimonials</span>'
-            // ));
-            
-            // $menu = $menu->add(Link::toRoute(
-            //     'admin.help.index',
-            //     '<i class="fa fa-file"></i> <span class="title">Helps</span>'
-            // ));
 
-            // $menu = $menu->add(Link::toRoute(
-            //     'admin.users.index',
-            //     '<i class="fa fa-users"></i> <span class="title">Users</span>'
-            // ));
-
+            $menu = $menu->add(Link::toRoute(
+                'admin.donation_amount.index',
+                '<i class="fa fa-th"></i> <span class="title">Donation Amount</span>'
+            ));
 
             $menu = $menu->add(Link::toRoute(
                 'admin.pages.index',
                 '<i class="fa fa-th"></i> <span class="title">Pages</span>'
             ));
 
-            //$menu = $menu->add(Link::toRoute(
-            //    'admin.administrators.index',
-            //    '<i class="fa fa-user"></i> <span class="title">Admin Users</span>'
-            //));
-
-            $menu = $menu->add(Link::toRoute(
-                'admin.site-settings.index',
-                '<i class="fa fa-cog"></i> <span class="title">Site Settings</span>'
-            ));
+            // $menu = $menu->add(Link::toRoute(
+            //     'admin.users.index',
+            //     '<i class="fa fa-users"></i> <span class="title">Users</span>'
+            // ));
 
             $menu = $menu->add(Link::toRoute(
                 'admin.newsletter.index',
                 '<i class="fa fa-cog"></i> <span class="title">Newsletter</span>'
+            ));
+
+            $menu = $menu->add(Link::toRoute(
+                'admin.site-settings.index',
+                '<i class="fa fa-cog"></i> <span class="title">Site Settings</span>'
             ));
 
             $menu = $menu->add(Link::toRoute(

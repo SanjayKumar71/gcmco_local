@@ -1,0 +1,31 @@
+.gallery_content {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.gallery_content a figure img {
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+}
+section.gallery_sec {
+    padding: 1rem 0 3rem;
+}
+section.universal_sec {
+    background: linear-gradient(180deg, #428C9C52, #428C9C52),url(../img/gallery/banner_bg.webp) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.gallery_content a figure img:hover {
+    filter: brightness(0.8);
+    transition: .5s;
+}
+.gallery_content a {
+    padding: 0;
+    max-width: 270px;
+    margin-top: 0 !important;
+}
+.uk-lightbox-items>.uk-active img {
+    width: 1200px;
+    height: 600px;
+}

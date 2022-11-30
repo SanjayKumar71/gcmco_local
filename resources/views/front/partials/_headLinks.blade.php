@@ -2,24 +2,21 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Site Title -->
-<title>Heed Way</title>
+<title>GCMCO</title>
 <!-- Site Title -->
 
 <!-- Favicon -->
-<link rel="icon" type="image/fav.png" href="{{ asset('front_assets/img/favicon.png') }}">
+<link rel="icon" type="image/x-icon" href="{{ asset('front_assets/img/favicon.webp') }}">
 <!-- Favicon -->
 
-<!-- Bootstrap CDN -->
-<link href="{{ asset('front_assets/css/bootstrap.min.css') }}" rel="stylesheet">
-    <!-- Bootstrap CDN -->
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="{{ asset('front_assets/css/bootstrap.min.css') }}">
+<!-- Bootstrap CSS -->
 
 <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- Font Awesome CDN -->
-
-<!-- Magnific Popup core CSS file -->
-<link rel="stylesheet" href="magnific-popup/magnific-popup.css">
-<!-- Magnific Popup core CSS file -->
 
 <!-- Slick Slider CDN -->
 <link rel="stylesheet" href="{{ asset('front_assets/slick/slick.css') }}">
@@ -33,4 +30,10 @@
 <!-- Css Stylesheet -->
 <link rel="stylesheet" href="{{ asset('front_assets/css/style.css') }}">
 <!-- Css Stylesheet -->
-@stack('css')
+
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/css/uikit.min.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.8/css/intlTelInput.css" />
+
+<link rel="stylesheet" href="{{ asset('front_assets/floating-accessibility-tools/dist/open-accessibility.min.css') }}" />

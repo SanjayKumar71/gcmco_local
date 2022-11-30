@@ -9,6 +9,10 @@ use Hash;
 
 class RegisterController extends Controller
 {
+    public function signUpForm(){
+        return view('front.signup');
+    }
+
     public function create(Request $request){
         $validated = $request->validate(
             [

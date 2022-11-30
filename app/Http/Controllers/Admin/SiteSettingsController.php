@@ -47,6 +47,7 @@ class SiteSettingsController extends Controller
             'previous_logo',
             'previous_cover'
         ]);
+        
         //check logo if exists
         if ($request->hasfile('logo')) {
             //move | upload file on server
@@ -64,6 +65,7 @@ class SiteSettingsController extends Controller
         } else {
             $filename = $request->previous_logo;
         }
+
         //check footer logo if exists
         if ($request->hasfile('footer_logo')) {
             //move | upload file on server
@@ -88,6 +90,6 @@ class SiteSettingsController extends Controller
 
         return redirect()
             ->route('admin.site-settings.index')
-            ->with('success', 'Site settings was updated successfully!');
+            ->with('success', 'Site settings updated successfully!');
     }
 }

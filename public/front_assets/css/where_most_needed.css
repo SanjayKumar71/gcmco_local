@@ -1,0 +1,197 @@
+.orange_header {
+    background: #ff6d12;
+    padding: 10px;
+    
+    margin: 1rem 0;
+
+}
+.orange_header a {
+    color: #FFFFFF;
+    font-family: "rubik";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0px;
+}
+.orange_header span{
+    color: #FFFFFF;
+}
+section.where_most_need_page {
+    background-image: url(../img/where_most_needed/where_most_needbg.webp);
+    background-size: cover;
+    background-position: inherit;
+    background-attachment: fixed;
+    background-repeat: no-repeat ;
+    
+}
+.where_most_content h1 {
+    color: #FF6D12;
+    font-family: "Roboto", Sans-serif;
+    font-size: 70px;
+    font-weight: 900;
+    text-transform: capitalize;
+    font-style: normal;
+    text-align: center;
+    padding-top: 60px;
+}
+.where_most_content p {
+    font-family: "roboto_r", Sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 36px;
+    color: #7a7a7a;
+    margin: 3rem 0;
+}
+section.where_most_sec .boxx {
+    background: transparent;
+    color: #000;
+    white-space: nowrap;
+    padding: 20px 47px;
+    text-align: center;
+    border: 1px solid #000;
+    font-family: "roboto_b";
+}
+
+section.where_most_sec label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+section.where_most_sec input.all_package:checked + label .boxx {
+    background: #697b88;
+    /* width: 100px;
+    height: 50px; */
+    padding: 20px 90px;
+    border: 1px solid grey;
+    color: #fff;
+    font-family: "roboto_b";
+}
+.where_most_content {
+    padding: 0px 100px 30px 100px;
+    background: #fff;
+}
+.black_select {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 10px;
+}
+.black_select.text-center .black_box {
+    /* flex: 1 1 33.3%;
+    min-width: 33.3%; */
+    padding: 0 0.0625rem 0.125rem;
+}
+section.where_most_sec .black_select .black_box label {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+}
+section.where_most_sec .black_select .black_box label .boxx{
+background: #ced5db;
+color: #43525e;
+cursor: pointer;
+padding: 20px 33px 20px 33px;
+border: 1px solid #ced5db;
+}
+section.where_most_sec .black_select .black_box label .boxx span {
+    font-family: 'roboto_b';
+    font-size: 22px;
+}
+section.where_most_sec .black_select .black_box input.all_package:checked + label .boxx{
+    background: #000;
+    color: #fff;
+    padding: 20px 33px 20px 33px;
+}
+section.where_most_sec .black_select .black_box label .boxx span input[type="text"] {
+    width: 90%;
+    line-height: 26px;
+    border: 0;
+    font-family: "roboto_r";
+    font-size: 16px;
+    margin-left: 5px;
+    background: transparent;
+    color: #fff;
+}
+.where_most_sec .form-group input.form-control.hidden_field {
+    display: none;
+}
+
+.where_most_sec .form-group input:checked ~ label input {
+    display: block !important;
+}
+.where_most_sec textarea.form-control {
+    height: 100px;
+}
+.where_most_sec .form-group button.submit_btn {
+    height: 44px;
+    line-height: 36px;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ff6d12;
+    border-color: transparent;
+    box-shadow: 0px 10px 40px 0px rgb(6 22 58 / 10%);
+    transition: 0.4s ease;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+}
+.where_most_sec .form_start .form-control {
+    height: calc(3.5rem + 2px);
+    line-height: 1.25;
+    font-family: "roboto_m";
+    font-size: 18px;
+}
+.where_most_sec .form_start .form-control.texts_area {
+    height: calc(5.5rem + 2px);
+}
+.where_most_sec .form_start .form-control::placeholder{
+    color: #7A7A7A;
+}
+.where_most_sec .form_start .form-group label {
+    color: #7a7a7a;
+    font-size: 19px;
+    font-family: "roboto_r";
+}
+.where_most_sec .form_start .form-group select {
+    color: #444;
+    height: 55px !important;
+}
+.where_most_sec .form_start .form-group {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.where_most_sec .form_start .input-group-prepend .input-group-text {
+    background: #fff;
+    border-right: 0;
+}
+section.where_most_sec {
+    padding: 1rem 0;
+}
+section.where_most_need_page .where_most_content .black_select .col-md-4 {
+    padding: 1px !important;
+}
+.where_most_sec .form_start .input-group-prepend .input-group-text i {
+    font-size: 20px;
+}
+.label_select_btn {
+    margin-bottom: 1rem;
+}
+
+/* section women distress start here */
+section.where_most_sec p.para_txt2 {
+    color: #54595F;
+    font-size: 19px;
+    font-family: "roboto_r";
+    text-decoration: none;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+@media(max-width:1199px){
+    section.where_most_sec .boxx{
+        padding: 15px 30px;
+    }
+    section.where_most_sec input.all_package:checked + label .boxx{
+        padding: 15px 60px;
+    }
+}

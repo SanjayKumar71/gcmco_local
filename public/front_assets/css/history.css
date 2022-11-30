@@ -1,0 +1,47 @@
+section.universal_sec {
+    background: linear-gradient(45deg, #428C9C52, transparent),url(../img/history/universal_banner.jpg) no-repeat;
+    background-size: cover;
+}
+.universal_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25rem;
+}
+.universal_content h1 {
+    color: #fff;
+    font-family: "roboto_m", Sans-serif;
+    font-size: 50px;
+}
+.universal_content p {
+    color: #fff;
+}
+.universal_content p {
+    color: #fff;
+    font-family: "roboto_r", Sans-serif;
+    font-size: 20px;
+}
+section.history_sec {
+    padding: 4rem 0;
+}
+h4.orange_heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 50px;
+}
+@media(max-width:1440px){
+    .universal_content {
+        padding: 20rem;
+    }
+}
+@media (max-width: 1366px){
+.universal_content {
+    padding: 18rem;
+}
+}
+@media(max-width:1280px){
+    .universal_content {
+        padding: 17rem;
+    }
+}

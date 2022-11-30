@@ -1,0 +1,54 @@
+section.universal_sec {
+    background: linear-gradient(180deg, #428C9C52, #428C9C52),url(../img/sponsor/sponsor1.webp) no-repeat;
+    background-size: cover;
+}
+.sponsor_content h1 {
+    color: #2C2734;
+    font-family: "robotoslab", Sans-serif;
+    font-size: 33px;
+    font-weight: 600;
+}
+.sponsor_content {
+    text-align: center;
+}
+.sponsor_content h4 {
+    color: #FF6D12;
+    font-family: "Roboto Slab", Sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+.sponsor_content figure img {
+    width: 180px;
+}
+.sponsor_content p {
+    color: #7a7a7a;
+    font-family: 'roboto_r';
+    font-size: 21px;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+section.sponsor_sec .sponsor_btn a.gcmco-btn {
+    font-family: "rubik", Sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    fill: #FFFFFF;
+    color: #FFFFFF;
+    background-color: #2C2734;
+    border-radius: 33px 33px 33px 33px;
+    padding: 25px 60px 25px 60px;
+}
+section.sponsor_sec .sponsor_btn a.gcmco-btn:hover{
+    color: #FF6D12;
+    background-color: #FFFFFF;
+}
+.sponsor_btn {
+    margin: 4rem 0;
+}
+section.sponsor_sec {
+    padding: 4rem 0;
+}
+@media(max-width:1199px){
+    section.sponsor_sec .sponsor_btn a.gcmco-btn{
+        padding: 25px 30px 25px 30px;
+    }
+}
