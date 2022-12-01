@@ -26,9 +26,9 @@
 
                         <div class="form-horizontal" role="form">
                             <div class="form-group">
-                                <label class="col-md-2 control-label"><strong>Image:</strong> </label>
+                                <label class="col-md-2 control-label"><strong>Campaign</strong> </label>
                                 <div class="col-md-8">
-                                    <label class="control-label"><img height="150" width="150" src="{!! asset(uploadsDir().$records->image) !!}"></label>
+                                    <label class="control-label">{{ $records->getCampaign->title }}</label>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -44,17 +44,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-2 control-label"><strong>Is Featured</strong> </label>
+                                <label class="col-md-2 control-label"><strong>Image:</strong> </label>
                                 <div class="col-md-8">
-                                    <label
-                                        class="control-label">{{ !empty($records->is_featured == 1) ? 'Yes' : 'No' }}</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-2 control-label"><strong>Is Default</strong> </label>
-                                <div class="col-md-8">
-                                    <label
-                                        class="control-label">{{ !empty($records->is_default == 1) ? 'Yes' : 'No' }}</label>
+                                    <label class="control-label"><img height="150" width="150" src="{!! asset(uploadsDir().$records->image) !!}"></label>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -69,7 +61,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-offset-2 col-md-10">
-                                    <button class="btn black" id="cancel" onclick='window.location.href = "{!! URL::route('admin.campaigns.index') !!}"'> < Back..</button>
+                                    <button class="btn black" id="cancel" onclick='window.location.href = "{!! URL::route('admin.sub_campaigns.index') !!}"'> < Back..</button>
                                 </div>
                             </div>
                         </div>

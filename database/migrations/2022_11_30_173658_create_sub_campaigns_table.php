@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTransactionsTable extends Migration
+class CreateSubCampaignsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateTransactionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('transactions', function (Blueprint $table) {
+        Schema::create('sub_campaigns', function (Blueprint $table) {
             $table->id();
-            $table->integer('campaign_id');
-            $table->string('donation_type');
-            $table->integer('amount');
-            $table->text('donar_info')->nullable();
-            $table->longText('charge_id')->nullable();
+            $table->integer('campaign_id')->default(0);
+            $table->string('title');
+            $table->longText('description')->nullable();
+            $table->longText('image')->nullable();
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateTransactionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transactions');
+        Schema::dropIfExists('sub_campaigns');
     }
 }

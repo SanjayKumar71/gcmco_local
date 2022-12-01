@@ -5,6 +5,7 @@
     @include('admin.layouts.partials.overview')
     <div class="container-fluid">
 
+        <!-- BEGIN PAGE CONTENT-->
         <div class="row">
             <div class="col-md-12">
 
@@ -43,7 +44,7 @@
                                 <th>Title</th>
                                 <th>Status</th>
                                 <th>Created Ago</th>
-                                <th width="10%" class="text-center">Actions</th>
+                                <th width="16%" class="text-center">Actions</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -83,6 +84,7 @@
 
             </div>
         </div>
+        <!-- END PAGE CONTENT-->
 
     </div>
 @endsection

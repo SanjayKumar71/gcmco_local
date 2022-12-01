@@ -12,6 +12,7 @@ use Illuminate\Support\Str;
 use App\Models\Campaign;
 use Exception;
 use Stripe;
+use Illuminate\Support\Facades\Validator;
 
 class StripeController extends Controller
 {
@@ -21,7 +22,18 @@ class StripeController extends Controller
 
     public function stripePost(Request $request)
     {
+        // dd($request);
         try {
+            
+            if(!isset($request->the_package)){
+                Session()->put('error','Donation Type is required');  
+                return redirect()->back()->with('campaign_id', $request->campaign_id);
+            }
+            if(!isset($request->the_package2)){
+                Session()->put('error','Donation Amount is required');  
+                return redirect()->back()->with('campaign_id', $request->campaign_id);
+            }
+
             DB::beginTransaction();
             Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
             
@@ -119,19 +131,20 @@ class StripeController extends Controller
                     'line1'       => $request->inputStreet,
                     'city'        => $request->inputCity,
                     'state'       => $request->inputState,
-                    'state'       => $request->inputCountry
+                    'country'     => $request->inputCountry
                 ],
                 'description' => $request->description,
                 'email'       => $request->email
             ];
 
             $transactionData = [
-                'campaign_id' => $campainData->id,
-                'amount' => $request->the_package2,
-                'donar_info' => json_encode($user_info),
-                'charge_id' => $price_id,
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s')
+                'campaign_id'   => $campainData->id,
+                'donation_type' => $request->the_package,
+                'amount'        => $request->the_package2,
+                'donar_info'    => json_encode($user_info),
+                'charge_id'     => $price_id,
+                'created_at'    => date('Y-m-d H:i:s'),
+                'updated_at'    => date('Y-m-d H:i:s')
             ];
             
             $transaction = Transaction::create($transactionData);

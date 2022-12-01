@@ -20,6 +20,28 @@
     <!-- section universal banner end here -->
     <section class="where_most_sec">
         <div class="container">
+        <div class="form_start">
+
+        @if(session()->has('error'))
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                {{ session()->get('error') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @php session()->forget('error'); @endphp
+        @endif
+
+        @if(session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session()->get('success') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @php session()->forget('success'); @endphp
+        @endif
+
         <form action="{{ route('store') }}" method="POST" id="payment-form">
         @csrf
         <input type="hidden" value="{{ $id }}" name="campaign_id">
@@ -72,7 +94,7 @@
 
             </div>
 
-            <div class="form_start">
+            
                 
                     <div class="row">
 
@@ -83,7 +105,7 @@
                                         <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    <input type="email" name="email" class="form-control" id="inlineFormInputGroup"
+                                    <input type="email" required name="email" class="form-control" id="inlineFormInputGroup"
                                         placeholder="Email *">
                                 </div>
                             </div>
@@ -91,14 +113,14 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="tel" class="form-control" id="inputphone" placeholder="Phone *"
+                                <input type="tel" required class="form-control" id="inputphone" placeholder="Phone *"
                                     name="phoneno">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="inputfirt" name="firstname"
+                                <input type="text" required class="form-control" id="inputfirt" name="firstname"
                                     placeholder="First Name">
                             </div>
                         </div>
@@ -131,21 +153,21 @@
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="inputCity" name="inputCity"
+                                <input type="text" required class="form-control" id="inputCity" name="inputCity"
                                     placeholder="City">
                             </div>
                         </div>
                         
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="inputState" name="inputState"
+                                <input type="text" required class="form-control" id="inputState" name="inputState"
                                     placeholder="State">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="inputCountry" name="inputCountry"
+                                <input type="text" required class="form-control" id="inputCountry" name="inputCountry"
                                     placeholder="Country">
                             </div>
                         </div>

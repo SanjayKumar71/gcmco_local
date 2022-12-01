@@ -9,4 +9,7 @@ class Campaign extends Model
 {
     use HasFactory;
     protected $guarded = [];
+    public function getTransaction(){
+        return $this->hasMany(Transaction::class, 'campaign_id');
+    }
 }

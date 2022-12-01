@@ -3,18 +3,17 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Campaign;
 use Illuminate\Http\Request;
+use App\Models\SubCampaign;
 
-class CampaignController extends Controller
+class SubCampaignController extends Controller
 {
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct() {
         //parent::__construct();
         $this->middleware('auth:admin');
 
@@ -27,9 +26,9 @@ class CampaignController extends Controller
      */
     public function index()
     {
-        $records = Campaign::all();
+        $records = SubCampaign::all();
 
-        return view('admin.campaigns.index', compact('records'));
+        return view('admin.sub_campaigns.index', compact('records'));
     }
 
     /**
@@ -39,7 +38,7 @@ class CampaignController extends Controller
      */
     public function create()
     {
-        return view('admin.campaigns.create');
+        return view('admin.sub_campaigns.create');
     }
 
     /**
@@ -59,15 +58,15 @@ class CampaignController extends Controller
         //move | upload file on server
         $file      = $request->file('image');
         $extension = $file->getClientOriginalExtension(); // getting file extension
-        $filename  = 'campaign-'.time() . '.' . $extension;
+        $filename  = 'subcampaign-'.time() . '.' . $extension;
         $file->move(uploadsDir(), $filename);
         $data['image'] = $filename;
 
-        Campaign::create($data);
+        SubCampaign::create($data);
 
         return redirect()
-            ->route('admin.campaigns.index')
-            ->with('success', 'Campaign has been added successfully.');
+            ->route('admin.sub_campaigns.index')
+            ->with('success', 'Sub Campaign has been added successfully.');
     }
 
     /**
@@ -78,9 +77,9 @@ class CampaignController extends Controller
      */
     public function show($id)
     {
-        $records = Campaign::where('id', $id)->first();
+        $records = SubCampaign::with('getCampaign')->where('id', $id)->first();
 
-        return view('admin.campaigns.show', compact('records'));
+        return view('admin.sub_campaigns.show', compact('records'));
     }
 
     /**
@@ -91,9 +90,9 @@ class CampaignController extends Controller
      */
     public function edit($id)
     {
-        $records = Campaign::where('id', $id)->first();
+        $records = SubCampaign::where('id', $id)->first();
 
-        return view('admin.campaigns.edit', compact('records'));
+        return view('admin.sub_campaigns.edit', compact('records'));
     }
 
     /**
@@ -110,7 +109,7 @@ class CampaignController extends Controller
             //move | upload file on server
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension(); // getting image extension
-            $filename = 'campaign-'.time() . '.' . $extension;
+            $filename = 'subcampaign-'.time() . '.' . $extension;
             $file->move(uploadsDir(), $filename);
 
             //remove/unlink if New uploaded successfully
@@ -131,11 +130,11 @@ class CampaignController extends Controller
 
         $data['image'] = $filename;
 
-        Campaign::where('id', $id)->update($data);
+        SubCampaign::where('id', $id)->update($data);
 
         return redirect()
-            ->route('admin.campaigns.index')
-            ->with('success', 'Campaign updated sucessfully.');
+            ->route('admin.sub_campaigns.index')
+            ->with('success', 'Sub Campaign updated sucessfully.');
     }
 
     /**
@@ -146,16 +145,16 @@ class CampaignController extends Controller
      */
     public function destroy($id)
     {
-        $service = Campaign::findOrFail($id); // delete Campaign
+        $subCampaign = SubCampaign::findOrFail($id); // delete Campaign
 
-        if ($service->image != '' && file_exists(uploadsDir() . $service->image)) {
-            unlink(uploadsDir() . $service->image);
+        if ($subCampaign->image != '' && file_exists(uploadsDir() . $subCampaign->image)) {
+            unlink(uploadsDir() . $subCampaign->image);
         }
 
-        $service->delete();
+        $subCampaign->delete();
 
         return redirect()
-            ->route('admin.campaigns.index')
-            ->with('success', 'Campaign removed successfully!');
+            ->route('admin.sub_campaigns.index')
+            ->with('success', 'Sub Campaign removed successfully!');
     }
 }

@@ -53,6 +53,20 @@
                                 <img height="100" width="150" src="{!! asset(uploadsDir().$records->image) !!}"/>
                             </div>
                             <div class="form-group">
+                                <label for="is_featured" class="col-md-2 control-label">Is Featured</label>
+                                <div>
+                                    <input type="radio" name="is_featured" value="1" {{ old('is_featured',$records->is_featured) == '1' ? 'checked="checked"' : '' }}>Yes 
+                                    <input type="radio" name="is_featured" value="0" {{ old('is_featured',$records->is_featured) == '0' ? 'checked="checked"' : '' }} style="margin-left: 10px;"> No
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="is_default" class="col-md-2 control-label">Is Default</label>
+                                <div>
+                                    <input type="radio" name="is_default" value="1" {{ old('is_default',$records->is_default) == '1' ? 'checked="checked"' : '' }}>Yes
+                                    <input type="radio" name="is_default" value="0" {{ old('is_default',$records->is_default) == '0' ? 'checked="checked"' : '' }} style="margin-left: 10px;"> No
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label for="last_name" class="col-md-2 control-label">Status *</label>
                                 <div class="col-md-4">
                                     <select class="form-control" name="status" required>
@@ -71,7 +85,7 @@
                             <div class="form-group">
                                 <div class="col-md-offset-2 col-md-10">
                                     <input type="submit" class="btn btn-info" id="save" value="Save">
-                                    <input type="button" class="btn black" onclick='window.location.href = "{!! URL::route('admin.donation_types.index') !!}"' name="cancel" id="cancel" value="Cancel">
+                                    <input type="button" class="btn black" onclick='window.location.href = "{!! URL::route('admin.campaigns.index') !!}"' name="cancel" id="cancel" value="Cancel">
                                 </div>
                             </div>
 

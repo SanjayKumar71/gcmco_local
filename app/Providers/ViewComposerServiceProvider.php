@@ -64,6 +64,22 @@ class ViewComposerServiceProvider extends ServiceProvider
         });
 
         /*
+         * Sub Campaign
+         */
+        view()->composer('admin.sub_campaigns.index', function ($view) {
+            $view->with(['pageTitle' => 'Sub Campaign List']);
+        });
+        view()->composer('admin.sub_campaigns.create', function ($view) {
+            $view->with(['pageTitle' => 'Add Sub Campaign File']);
+        });
+        view()->composer('admin.sub_campaigns.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Sub Campaign File']);
+        });
+        view()->composer('admin.sub_campaigns.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit Sub Campaign File']);
+        });
+
+        /*
          * Donation Types
          */
         view()->composer('admin.donation_types.index', function ($view) {
@@ -93,6 +109,16 @@ class ViewComposerServiceProvider extends ServiceProvider
         });
         view()->composer('admin.donation_amount.edit', function ($view) {
             $view->with(['pageTitle' => 'Edit Donation Amount File']);
+        });
+
+        /*
+         * Transactions
+         */
+        view()->composer('admin.transactions.index', function ($view) {
+            $view->with(['pageTitle' => 'Transaction List']);
+        });
+        view()->composer('admin.transactions.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Transaction']);
         });
 
         /*

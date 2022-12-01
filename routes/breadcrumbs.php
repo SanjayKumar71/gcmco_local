@@ -61,6 +61,34 @@ Breadcrumbs::for('admin.campaigns.edit', function ($breadcrumbs, $data) {
 
 /*
 |--------------------------------------------------------------------------
+| Sub Campaign
+|--------------------------------------------------------------------------
+*/
+
+// sub_campaigns
+Breadcrumbs::for('admin.sub_campaigns.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('Campaign List', route('admin.sub_campaigns.index'));
+});
+// sub_campaigns > New
+Breadcrumbs::for('admin.sub_campaigns.create', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.sub_campaigns.index');
+    $breadcrumbs->push('Add', route('admin.sub_campaigns.create'));
+});
+// sub_campaigns > Show.
+Breadcrumbs::for('admin.sub_campaigns.show', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.sub_campaigns.index');
+    $breadcrumbs->push($data->title, route('admin.sub_campaigns.show', $data->id));
+});
+// sub_campaigns > Edit
+Breadcrumbs::for('admin.sub_campaigns.edit', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.sub_campaigns.show', $data);
+    $breadcrumbs->push('Edit', route('admin.sub_campaigns.edit', $data->id));
+});
+// End sub_campaigns //
+
+/*
+|--------------------------------------------------------------------------
 | Donation Types
 |--------------------------------------------------------------------------
 */
@@ -114,6 +142,24 @@ Breadcrumbs::for('admin.donation_amount.edit', function ($breadcrumbs, $data) {
     $breadcrumbs->push('Edit', route('admin.donation_amount.edit', $data->id));
 });
 // End Donation amount //
+
+/*
+|--------------------------------------------------------------------------
+| Donation amount
+|--------------------------------------------------------------------------
+*/
+
+// Transaction
+Breadcrumbs::for('admin.transactions.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('Transaction List', route('admin.transactions.index'));
+});
+// Transaction > Show.
+Breadcrumbs::for('admin.transactions.show', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.transactions.index');
+    $breadcrumbs->push('Transaction', route('admin.transactions.show', $data->id));
+});
+// End Transaction //
 
 /*
 |--------------------------------------------------------------------------

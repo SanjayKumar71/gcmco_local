@@ -59,6 +59,11 @@ class AdminMenu
             ));
 
             $menu = $menu->add(Link::toRoute(
+                'admin.sub_campaigns.index',
+                '<i class="fa fa-th"></i> <span class="title">Sub Campaigns</span>'
+            ));
+
+            $menu = $menu->add(Link::toRoute(
                 'admin.donation_types.index',
                 '<i class="fa fa-th"></i> <span class="title">Donation Types</span>'
             ));
@@ -66,6 +71,11 @@ class AdminMenu
             $menu = $menu->add(Link::toRoute(
                 'admin.donation_amount.index',
                 '<i class="fa fa-th"></i> <span class="title">Donation Amount</span>'
+            ));
+
+            $menu = $menu->add(Link::toRoute(
+                'admin.transactions.index',
+                '<i class="fa fa-th"></i> <span class="title">Transactions</span>'
             ));
 
             $menu = $menu->add(Link::toRoute(

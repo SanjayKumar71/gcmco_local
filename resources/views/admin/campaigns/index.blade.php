@@ -43,6 +43,7 @@
                                 <tr>
                                     <th>Image</th>
                                     <th>Title</th>
+                                    <th>Is Featured</th>
                                     <th>Status</th>
                                     <th>Created Ago</th>
                                     <th width="10%" class="text-center">Actions</th>
@@ -53,6 +54,13 @@
                                     <tr class="odd gradeX">
                                         <td><img style="width: 100px;height:80px;" src="{!! asset(uploadsDir().$record->image ?? '') !!}"></td>
                                         <td>{!! $record->title !!}</td>
+                                        <td>
+                                            @if($record->is_featured == 1)
+                                                <span class="label label-primary">Yes</span>
+                                            @else
+                                                <span class="label label-danger">No</span>
+                                            @endif
+                                        </td>
                                         <td>
                                             @if($record->status == 1)
                                                 <span class="label label-primary">Active</span>

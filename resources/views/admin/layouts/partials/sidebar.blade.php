@@ -207,6 +207,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a  class="nav-link" href="{{ route('admin.sub_campaigns.index') }}">
+                            Sub Campaigns
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a  class="nav-link" href="{{ route('admin.donation_types.index') }}">
                             Donation Types
                         </a>
@@ -214,6 +219,11 @@
                     <li class="nav-item">
                         <a  class="nav-link" href="{{ route('admin.donation_amount.index') }}">
                             Donation Amount
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a  class="nav-link" href="{{ route('admin.transactions.index') }}">
+                            Transactions
                         </a>
                     </li>
                     <li class="nav-item">

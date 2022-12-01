@@ -59,8 +59,10 @@ Route::name('admin.')->group(
             Route::resource('about_us', 'AboutUsController');
             Route::resource('administrators', 'AdministratorsController');
             Route::resource('campaigns', 'CampaignController');
+            Route::resource('sub_campaigns', 'SubCampaignController');
             Route::resource('donation_types', 'DonationTypeController');
             Route::resource('donation_amount', 'DonationAmountController');
+            Route::resource('transactions', 'TransactionController');
             Route::resource('pages', 'PagesController');
             Route::resource('users', 'UsersController');
             Route::resource('newsletter', 'NewsletterController');

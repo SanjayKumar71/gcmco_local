@@ -87,7 +87,7 @@
                                     alerts, and Volunteer opportunities
                                 </p>
                                 <div>
-                                    <a href="{{ route('signup') }}" class="gcmco-btn">Click to Sign Up</a>
+                                    <a href="" class="gcmco-btn">Click to Sign Up</a>
                                 </div>
                             </div>
                             <!-- <ul class="footer-links">
