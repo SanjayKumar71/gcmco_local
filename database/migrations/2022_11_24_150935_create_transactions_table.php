@@ -15,7 +15,8 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->integer('campaign_id');
+            $table->integer('campaign_id')->default(0);
+            $table->integer('sub_campaign_id')->default(0);
             $table->string('donation_type');
             $table->integer('amount');
             $table->text('donar_info')->nullable();

@@ -13,4 +13,8 @@ class Transaction extends Model
     public function getCampaign(){
         return $this->belongsTo(Campaign::class, 'campaign_id');
     }
+
+    public function getSubCampaign(){
+        return $this->belongsTo(SubCampaign::class, 'sub_campaign_id');
+    }
 }

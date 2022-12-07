@@ -111,25 +111,27 @@
         <div class="christnamecarousel">
         @if(count($siteSettings['campaigns']) > 0)
             @foreach($siteSettings['campaigns'] as $key => $campaign)
-                <div class="christnamecontent">
-                    <a href="{{ route('giveus_form', $campaign->id) }}">
-                        <figure>
-                            @if( isset($campaign->image) && $campaign->image != "")
-                                <img src="{{ asset(uploadsDir().$campaign->image) }}" class="img-fluid" alt="">
-                            @endif
-                        </figure>
-                    </a>
-                    <div class="button-group">
-                        <a href="{{ route('giveus_form', $campaign->id) }}" class="btn">Give</a>
-                    </div>
-                    <div class="para_text2">
-                        <a href="#">
-                            <p>
-                                {{ isset($campaign->title) ? $campaign->title : '' }}
-                            </p>
+                @if($campaign->is_featured == 1)
+                    <div class="christnamecontent">
+                        <a href="{{ route('giveus_form', $campaign->id) }}">
+                            <figure>
+                                @if( isset($campaign->image) && $campaign->image != "")
+                                    <img src="{{ asset(uploadsDir().$campaign->image) }}" class="img-fluid" alt="">
+                                @endif
+                            </figure>
                         </a>
+                        <div class="button-group">
+                            <a href="{{ route('giveus_form', $campaign->id) }}" class="btn">Give</a>
+                        </div>
+                        <div class="para_text2">
+                            <a href="#">
+                                <p>
+                                    {{ isset($campaign->title) ? $campaign->title : '' }}
+                                </p>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                @endif
             @endforeach
         @endif
         </div>

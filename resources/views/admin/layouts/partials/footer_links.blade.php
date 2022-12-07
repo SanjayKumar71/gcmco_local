@@ -11,6 +11,8 @@
 
 {{--{!! Toastr::message() !!}--}}
 
+<script type="text/javascript" src="{!! URL::to('assets/admin/plugins/ckeditor/ckeditor.js') !!}"></script>
+
 <!-- Theme JS -->
 <script src="{{asset('assets/admin/assets/js/theme.bundle.js')}}"></script>
 

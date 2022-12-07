@@ -56,7 +56,13 @@
                                 <tr class="odd gradeX">
                                     <td>{!! json_decode($record->donar_info)->name !!}</td>
                                     <td>{!! json_decode($record->donar_info)->email !!}</td>
-                                    <td>{!! $record->getCampaign->title !!}</td>
+                                    <td>
+                                        @if(isset($record->getCampaign) && $record->getCampaign != '')
+                                            {!! $record->getCampaign->title !!}
+                                            @elseif(isset($record->getSubCampaign) && $record->getSubCampaign != '')
+                                                {!! $record->getSubCampaign->title !!}
+                                        @endif
+                                    </td>
                                     <td>{!! $record->amount !!}</td>
                                     <td>{!! $record->created_at->diffForHumans(); !!}</td>
                                     <td class="center text-center" width="16%">

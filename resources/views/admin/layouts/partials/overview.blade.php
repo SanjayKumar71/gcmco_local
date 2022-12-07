@@ -12,14 +12,9 @@
                     </h6>
 
                     <!-- Title -->
-
-                    @if(Breadcrumbs::render('admin.category.create'))
-                        {{ Breadcrumbs::render('admin.category.create') }}
-                    @else
-                        <h1 class="header-title">
-                            {{ $pageTitle }}
-                        </h1>
-                    @endif
+                    <h1 class="header-title">
+                        {{ $pageTitle }}
+                    </h1>
                 </div>
 
             </div> <!-- / .row -->
@@ -34,7 +29,6 @@
 {{--    <div class="col-md-12">--}}
 {{--        <!-- BEGIN PAGE TITLE & BREADCRUMB-->--}}
 {{--        <h3 class="page-title">{{ $pageTitle }} <small></small></h3>--}}
-{{--    {{ Breadcrumbs::render('admin.category.index') }}--}}
 {{--    <!-- END PAGE TITLE & BREADCRUMB-->--}}
 {{--    </div>--}}
 {{--</div>--}}

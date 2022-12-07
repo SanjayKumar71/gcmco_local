@@ -98,59 +98,34 @@
                                         Get Involved
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <li><a class="dropdown-item the_drop_menu" href="{{ route('where_most_needed') }}">Where
-                                                Most Needed</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item the_drop_menu" href="{{ route('women_distress') }}">Women in
-                                                Distress</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item the_drop_menu" href="{{ route('hungary_kid') }}">Hungry Kids
-                                                program</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item the_drop_menu" href="{{ route('women_distress') }}">Drill A
-                                                Well</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item the_drop_menu" href="{{ route('hungary_kid') }}">Hope Homes</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item the_drop_menu" href="{{ route('women_distress') }}">
-                                                Sponsor a Missionary &raquo;
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-submenu">
+
+                                        @if(count($siteSettings['campaigns']) > 0)
+                                            @foreach($siteSettings['campaigns'] as $key => $val)
+                                              
                                                 <li>
-                                                    <a class="dropdown-item the_drop_menu"
-                                                        href="{{ route('hungary_kid') }}">Lawrence Family</a>
+                                                    @if(isset($val->getSubCampaigns) && count($val->getSubCampaigns) > 0)
+                                                        <a class="dropdown-item the_drop_menu" href="#">
+                                                            {{ $val->title }}
+                                                                &raquo;
+                                                        </a>
+                                                        <ul class="dropdown-menu dropdown-submenu">
+                                                            @foreach($val->getSubCampaigns as $subCampKey => $subCampVal)
+                                                                <li>
+                                                                    <a class="dropdown-item the_drop_menu" 
+                                                                        href="{{ route('get_involved_form', ['id'=>$subCampVal->id, 'campaign_id'=>$val->id]) }}">{{ $subCampVal->title }}</a>
+                                                                </li>
+                                                            @endforeach
+                                                        </ul>
+
+                                                        @else()
+                                                            <a class="dropdown-item the_drop_menu" href="{{ route('get_involved_form', ['id'=>$val->id]) }}">
+                                                                {{ $val->title }}
+                                                            </a>
+
+                                                    @endif
                                                 </li>
-                                                <li>
-                                                    <a class="dropdown-item the_drop_menu"
-                                                        href="{{ route('women_distress') }}">Peter Odoyo</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item the_drop_menu" href="{{ route('hungary_kid') }}">Joseph
-                                                        Okoth</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item the_drop_menu"
-                                                        href="{{ route('women_distress') }}">Preston Jumba</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item the_drop_menu"
-                                                        href="{{ route('hungary_kid') }}">Lindenberg Family</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item the_drop_menu"
-                                                        href="{{ route('women_distress') }}">Daniel Balume</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item the_drop_menu" href="{{ route('hungary_kid') }}">Vivian
-                                                        Mutai</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                            @endforeach
+                                        @endif
                                     </ul>
                                 </div>
                             </li>
@@ -180,7 +155,13 @@
                 </div>
                 <div class="col-md-1 align-self-center">
                     <div class="header_right">
-                        <a href="{{ route('where_most_needed') }}" class="btn gcmco-btn">Give</a>
+                        @if(count($siteSettings['campaigns']) > 0)
+                            @foreach($siteSettings['campaigns'] as $key => $val)
+                                @if($val->is_default == 1)
+                                    <a href="{{ route('default_give', $val->id) }}" class="btn gcmco-btn">Give</a>
+                                @endif
+                            @endforeach
+                        @endif
                     </div>
                 </div>
 

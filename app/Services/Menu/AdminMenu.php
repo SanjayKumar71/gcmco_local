@@ -28,19 +28,59 @@ class AdminMenu
                 '<i class="fa fa-home"></i> <span class="title">Home Content</span>'
             ));
 
-            // $menu = $menu->add(Link::toRoute(
-            //     'admin.blogs.index',
-            //     '<i class="fa fa-file"></i> <span class="title">Blogs</span>'
-            // ));
+            $menu = $menu->add(Link::toRoute(
+                'admin.history.index',
+                '<i class="fa fa-home"></i> <span class="title">History</span>'
+            ));
 
             $menu = $menu->add(Link::toRoute(
-                'admin.category.index',
-                '<i class="fa fa-file"></i> <span class="title">Category</span>'
+                'admin.gcm_team.index',
+                '<i class="fa fa-home"></i> <span class="title">GCM Team</span>'
             ));
+
+            $menu = $menu->add(Link::toRoute(
+                'admin.what_they_say.index',
+                '<i class="fa fa-home"></i> <span class="title">What They Say</span>'
+            ));
+
+            $menu = $menu->add(Link::toRoute(
+                'admin.who_we_are.index',
+                '<i class="fa fa-home"></i> <span class="title">Who We Are</span>'
+            ));
+            
+            $menu = $menu->add(Link::toRoute(
+                'admin.statement_of_faith.index',
+                '<i class="fa fa-home"></i> <span class="title">Statement Of Faith</span>'
+            ));
+
+            $menu = $menu->add(Link::toRoute(
+                'admin.sponsors.index',
+                '<i class="fa fa-home"></i> <span class="title">Sponsors</span>'
+            ));
+
+            // $menu = $menu->add(Link::toRoute(
+            //     'admin.category.index',
+            //     '<i class="fa fa-file"></i> <span class="title">Category</span>'
+            // ));
 
             $menu = $menu->add(Link::toRoute(
                 'admin.contact_queries.index',
                 '<i class="fa fa-file"></i> <span class="title">Contact Queries</span>'
+            ));
+
+            $menu = $menu->add(Link::toRoute(
+                'admin.speaking_events.index',
+                '<i class="fa fa-file"></i> <span class="title">Speaking Event</span>'
+            ));
+
+            $menu = $menu->add(Link::toRoute(
+                'admin.speakers.index',
+                '<i class="fa fa-file"></i> <span class="title">Speaker</span>'
+            ));
+
+            $menu = $menu->add(Link::toRoute(
+                'admin.speaker_requests.index',
+                '<i class="fa fa-file"></i> <span class="title">Speaker Request</span>'
             ));
 
             $menu = $menu->add(Link::toRoute(
@@ -79,9 +119,24 @@ class AdminMenu
             ));
 
             $menu = $menu->add(Link::toRoute(
-                'admin.pages.index',
-                '<i class="fa fa-th"></i> <span class="title">Pages</span>'
+                'admin.news_articles.index',
+                '<i class="fa fa-th"></i> <span class="title">News & Articles</span>'
             ));
+
+            $menu = $menu->add(Link::toRoute(
+                'admin.photo_gallery.index',
+                '<i class="fa fa-th"></i> <span class="title">Photo Gallery</span>'
+            ));
+
+            $menu = $menu->add(Link::toRoute(
+                'admin.videos.index',
+                '<i class="fa fa-th"></i> <span class="title">Videos</span>'
+            ));
+
+            // $menu = $menu->add(Link::toRoute(
+            //     'admin.pages.index',
+            //     '<i class="fa fa-th"></i> <span class="title">Pages</span>'
+            // ));
 
             // $menu = $menu->add(Link::toRoute(
             //     'admin.users.index',

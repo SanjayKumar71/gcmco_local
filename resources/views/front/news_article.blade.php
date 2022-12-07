@@ -33,51 +33,53 @@
                     </div>
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-md-4">
-                                <div class="product-sec">
-                                    <div class="product-img">
-                                        <a href="{{ route('news_article_detail') }}">
-                                            <img class="img-fluid" src="{{ asset('front_assets/img/home/homenewsarticles1.jpg') }}" alt="">
-                                        </a>
+                            @if(count($records) > 0)
+                                @foreach($records as $newsArticleKey => $newsArticleVal)
+                                    <div class="col-md-4">
+                                        <div class="product-sec">
+                                            <div class="product-img">
+                                                <a href="{{ route('news_article_detail',$newsArticleVal->id) }}">
+                                                    <img class="img-fluid" src="{!! asset(uploadsDir().$newsArticleVal->news_image) !!}" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product_desc">
+                                                <a href="{{ route('news_article_detail', ['id' => $newsArticleVal->id]) }}">
+                                                    <p class="para_txt2">
+                                                        {!! $newsArticleVal->news_heading !!}
+                                                    </p>
+                                                </a>
+                                            </div>
+                                            <div class="addtocartbtn ">
+                                                <a class="btn " href="{{ route('news_article_detail', ['id' => $newsArticleVal->id]) }}">
+                                                    READ MORE >>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="product_desc">
-                                        <a href="{{ route('news_article_detail') }}">
-                                            <p class="para_txt2">
-
-                                                WE TOLD THEM TO COME OUT OF THE CHURCH, BUT THEY LOCKED THE DOOR…SO WE
-                                                BURNED
-                                                THEM </p>
-                                        </a>
+                                @endforeach
+                                <!-- <div class="col-md-4">
+                                    <div class="product-sec">
+                                        <div class="product-img">
+                                            <a href="{{ route('news_article_detail') }}">
+                                                <img class="img-fluid" src="{{ asset('front_assets/img/home/homenewsarticles2.jpg') }}" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="product_desc">
+                                            <a href="{{ route('news_article_detail') }}">
+                                                <p class="para_txt2">
+                                                    WE TOLD THEM TO COME OUT OF THE CHURCH, BUT THEY LOCKED THE DOOR…SO WE
+                                                    BURNED
+                                                    THEM </p>
+                                            </a>
+                                        </div>
+                                        <div class="addtocartbtn ">
+                                            <a class="btn " href="{{ route('news_article_detail') }}">
+                                                READ MORE >>
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="addtocartbtn ">
-                                        <a class="btn " href="{{ route('news_article_detail') }}">
-                                            READ MORE >>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="product-sec">
-                                    <div class="product-img">
-                                        <a href="{{ route('news_article_detail') }}">
-                                            <img class="img-fluid" src="{{ asset('front_assets/img/home/homenewsarticles2.jpg') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="product_desc">
-                                        <a href="{{ route('news_article_detail') }}">
-                                            <p class="para_txt2">
-                                                WE TOLD THEM TO COME OUT OF THE CHURCH, BUT THEY LOCKED THE DOOR…SO WE
-                                                BURNED
-                                                THEM </p>
-                                        </a>
-                                    </div>
-                                    <div class="addtocartbtn ">
-                                        <a class="btn " href="{{ route('news_article_detail') }}">
-                                            READ MORE >>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                                </div> -->
+                            @endif
                             <div class="col-md-4"></div>
                         </div>
                     </div>

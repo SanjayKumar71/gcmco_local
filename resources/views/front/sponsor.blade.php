@@ -8,28 +8,24 @@
 <!-- sponsor body start here -->
 <section class="sponsor_page">
     <!-- section universal banner start here -->
-    <section class="universal_sec">
+    <section class="universal_sec" style="background: linear-gradient(180deg, #428C9C52, #428C9C52),url('{{ asset(uploadsDir().$sponsorData->banner) }}') no-repeat;background-size: cover;">
         <div class="universal_content">
-            <h1>Sponsor</h1>
-            <p>Home &nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i> &nbsp;&nbsp;Sponsor</p>
+            <h1>{{ $sponsorData->banner_heading }}</h1>
+            <p>Home &nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i> &nbsp;&nbsp;{{ $sponsorData->banner_heading }}</p>
         </div>
     </section>
     <!-- section universal banner end here -->
     <!-- section body start here -->
-    <section class="sponsor_sec">
+    <section class="sponsor_sec" >
         <div class="container">
             <div class="sponsor_content">
-                <h1>Good News should be accompanied by Good Deeds</h1>
-                <h4>Your Support provides help and hope that transforms lives.</h4>
+                <h1>{{ $sponsorData->heading }}</h1>
+                <h4>{{ $sponsorData->sub_heading }}</h4>
                 <figure>
-                    <img src="img/sponsor/sponsor2.webp" class="img-fluid" alt="">
+                    <img src="{!! asset(uploadsDir().$sponsorData->image) !!}" class="img-fluid" alt="">
                 </figure>
                 <p>
-                    Together we can show the love of Christ by providing food, clothing, clean water, medical supplies,
-                    basic and bible education, and Discipleship through local churches.For $ 50/ dollars/month support
-                    helps free children from hunger and more.Your support makes it possible to
-                    <br> HELP! <br>
-                    Your monthly gift helps children and their families or children with no family have food and basic needs. Through this they feel loved, wanted, and can hopefullyexperience the love of Jesus Christ our Lord.
+                    {!! $sponsorData->description !!}
                 </p>
                 <div class="row">
                     <div class="col-md-9">
@@ -39,7 +35,7 @@
                     <div class="col-md-9"></div>
                     <div class="col-md-3">
                         <div class="sponsor_btn">
-                            <a href="{{ route('get_involved') }}" class="gcmco-btn">Get Involved Now</a>
+                            <a href="{{ route('contact_information') }}" class="gcmco-btn">Get Involved Now</a>
                         </div>
                     </div>
                 </div>

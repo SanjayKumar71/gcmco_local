@@ -27,7 +27,7 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        $records = Transaction::with('getCampaign')->get();
+        $records = Transaction::with('getSubCampaign')->with('getCampaign')->get();
         return view("admin.transactions.index", compact('records'));
     }
 

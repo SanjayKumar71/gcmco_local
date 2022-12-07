@@ -37,7 +37,7 @@
                             <a href="{{ route('giveus_form', $campaign->id) }}" class="btn">Give</a>
                         </div>
                         <div class="para_text2">
-                            <a href="">
+                            <a href="{{ route('giveus_form', $campaign->id) }}">
                                 <p>
                                     {{ isset($campaign->title) ? $campaign->title : '' }}
                                 </p>

@@ -71,7 +71,13 @@
                             <div class="form-group">
                                 <label class="col-md-2 control-label"><strong>Campaign</strong> </label>
                                 <div class="col-md-8">
-                                    <label class="control-label">{{ $data->getCampaign->title }}</label>
+                                    <label class="control-label">
+                                        @if(isset($data->getCampaign) && $data->getCampaign != '')
+                                            {!! $data->getCampaign->title !!}
+                                            @elseif(isset($data->getSubCampaign) && $data->getSubCampaign != '')
+                                                {!! $data->getSubCampaign->title !!}
+                                        @endif
+                                    </label>
                                 </div>
                             </div>
 
@@ -85,14 +91,14 @@
                             <div class="form-group">
                                 <label class="col-md-2 control-label"><strong>Amount</strong> </label>
                                 <div class="col-md-8">
-                                    <label class="control-label">{{ $data->amount }}</label>
+                                    <label class="control-label">${{ $data->amount }}</label>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-2 control-label"><strong>Description</strong> </label>
                                 <div class="col-md-8">
-                                    <label class="control-label">@if( isset( son_decode($data->donar_info)->description ) ) {{ json_decode($data->donar_info)->description }} @endif</label>
+                                    <label class="control-label">@if( isset( json_decode($data->donar_info)->description ) ) {{ json_decode($data->donar_info)->description }} @endif</label>
                                 </div>
                             </div>
                             

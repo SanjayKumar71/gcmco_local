@@ -93,44 +93,6 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link " href="{{ route('admin.category.index') }}">
-                        <i class="fe fe-users"></i> Category
-                    </a>
-                </li>
-
-                <!-- <li class="nav-item">
-                    <a class="nav-link " href="">
-                        <i class="fe fe-user-plus"></i> Fixer List
-                    </a>
-                </li> -->
-
-
-                <!-- <li class="nav-item">
-                    <a class="nav-link " href="">
-                        <i class="fe fe-layers"></i> Category
-                    </a>
-                </li> -->
-
-                <!-- <li class="nav-item">
-                    <a class="nav-link " href="">
-                        <i class="fe fe-list"></i> Product
-                    </a>
-                </li> -->
-
-                <!-- <li class="nav-item">
-                    <a class="nav-link " href="">
-                        <i class="fe fe-menu"></i> Services
-                    </a>
-                </li> -->
-
-
-                <!-- <li class="nav-item">
-                    <a class="nav-link " href="">
-                        <i class="fe fe-radio"></i> Jobs
-                    </a>
-                </li> -->
-
                 <!-- <li class="nav-item">
                     <a class="nav-link " href="">
                         <i class="fe fe-mail"></i> News Letter
@@ -143,28 +105,21 @@
                     </a>
                 </li>
 
-
-                <!-- <li class="nav-item">
-                    <a class="nav-link " href="">
-                        <i class="fe fe-activity"></i> Client Review
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ route('admin.speaking_events.index') }}">
+                        <i class="fe fe-mic"></i> Speaking Event
                     </a>
-                </li> -->
-
-                <!-- <li class="nav-item">
-                    <a class="nav-link " href="">
-                        <i class="fe fe-award"></i> Social Linking
-                    </a>
-                </li> -->
-
-                <!-- <li class="nav-item">
-                    <a class="nav-link " href="">
-                        <i class="fe fe-align-right"></i> Faqs
-                    </a>
-                </li> -->
+                </li>
 
                 <li class="nav-item">
-                    <a class="nav-link " href="">
-                        <i class="fe fe-dollar-sign"></i> Transactions
+                    <a class="nav-link " href="{{ route('admin.speakers.index') }}">
+                        <i class="fe fe-user"></i> Speaker
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ route('admin.speaker_requests.index') }}">
+                        <i class="fe fe-user"></i> Speaker Request
                     </a>
                 </li>
 
@@ -202,6 +157,36 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.history.index') }}">
+                            History
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.gcm_team.index') }}">
+                            GCM Team
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.what_they_say.index') }}">
+                            What They Say
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.who_we_are.index') }}">
+                            Who We Are
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.statement_of_faith.index') }}">
+                            Statement Of Faith
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.sponsors.index') }}">
+                            Sponsors
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a  class="nav-link" href="{{ route('admin.campaigns.index') }}">
                             Campaigns
                         </a>
@@ -227,15 +212,25 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link ">
-                            Contacts
+                        <a  class="nav-link" href="{{ route('admin.news_articles.index') }}">
+                            News & Articles
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link ">
-                            Pages
+                        <a  class="nav-link" href="{{ route('admin.photo_gallery.index') }}">
+                            Photo Gallery
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a  class="nav-link" href="{{ route('admin.videos.index') }}">
+                            Videos
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="#" class="nav-link ">
+                            Pages
+                        </a>
+                    </li> -->
 
                 </ul>
                 <!-- Navigation -->

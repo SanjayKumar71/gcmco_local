@@ -48,6 +48,66 @@ class ViewComposerServiceProvider extends ServiceProvider
         });
 
         /*
+         * History
+         */
+        view()->composer('admin.history.index', function ($view) {
+            $view->with(['pageTitle' => 'History']);
+        });
+
+        /*
+         * GCM Team
+         */
+        view()->composer('admin.gcm_team.index', function ($view) {
+            $view->with(['pageTitle' => 'GCM Team List']);
+        });
+        view()->composer('admin.gcm_team.create', function ($view) {
+            $view->with(['pageTitle' => 'Add GCM Team']);
+        });
+        view()->composer('admin.gcm_team.show', function ($view) {
+            $view->with(['pageTitle' => 'Show GCM Team']);
+        });
+        view()->composer('admin.gcm_team.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit GCM Team']);
+        });
+
+        /*
+         * What They Say
+         */
+        view()->composer('admin.what_they_say.index', function ($view) {
+            $view->with(['pageTitle' => 'What They Say List']);
+        });
+        view()->composer('admin.what_they_say.create', function ($view) {
+            $view->with(['pageTitle' => 'Add What They Say']);
+        });
+        view()->composer('admin.what_they_say.show', function ($view) {
+            $view->with(['pageTitle' => 'Show What They Say']);
+        });
+        view()->composer('admin.what_they_say.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit What They Say']);
+        });
+
+        /*
+         * Who We Are
+         */
+        view()->composer('admin.who_we_are.index', function ($view) {
+            $view->with(['pageTitle' => 'Who We Are']);
+        });
+
+        /*
+         * Statement Of Faith
+         */
+        view()->composer('admin.statement_of_faith.index', function ($view) {
+            $view->with(['pageTitle' => 'Statement Of Faith']);
+        });
+
+        /*
+         * Sponsor
+         */
+        view()->composer('admin.sponsors.index', function ($view) {
+            $view->with(['pageTitle' => 'Sponsor']);
+        });
+
+        /*
          * Campaign
          */
         view()->composer('admin.campaigns.index', function ($view) {
@@ -122,6 +182,54 @@ class ViewComposerServiceProvider extends ServiceProvider
         });
 
         /*
+         * News Articles
+         */
+        view()->composer('admin.news_articles.index', function ($view) {
+            $view->with(['pageTitle' => 'News Article List']);
+        });
+        view()->composer('admin.news_articles.create', function ($view) {
+            $view->with(['pageTitle' => 'Add News Article']);
+        });
+        view()->composer('admin.news_articles.show', function ($view) {
+            $view->with(['pageTitle' => 'Show News Article']);
+        });
+        view()->composer('admin.news_articles.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit News Article']);
+        });
+
+        /*
+         * Photo Gallery
+         */
+        view()->composer('admin.photo_gallery.index', function ($view) {
+            $view->with(['pageTitle' => 'Photo Gallery List']);
+        });
+        view()->composer('admin.photo_gallery.create', function ($view) {
+            $view->with(['pageTitle' => 'Add Photo Gallery']);
+        });
+        view()->composer('admin.photo_gallery.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Photo Gallery']);
+        });
+        view()->composer('admin.photo_gallery.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit Photo Gallery']);
+        });
+
+        /*
+         * Video
+         */
+        view()->composer('admin.videos.index', function ($view) {
+            $view->with(['pageTitle' => 'Video List']);
+        });
+        view()->composer('admin.videos.create', function ($view) {
+            $view->with(['pageTitle' => 'Add Video']);
+        });
+        view()->composer('admin.videos.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Video']);
+        });
+        view()->composer('admin.videos.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit Video']);
+        });
+
+        /*
          * Blogs
          */
         view()->composer('admin.blogs.index', function ($view) {
@@ -158,6 +266,51 @@ class ViewComposerServiceProvider extends ServiceProvider
          */
         view()->composer('admin.contact_queries.index', function ($view) {
             $view->with(['pageTitle' => 'Contact Queries']);
+        });
+        view()->composer('admin.contact_queries.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Contact Query']);
+        });
+
+        /*
+         * Speaking Events
+         */
+        view()->composer('admin.speaking_events.index', function ($view) {
+            $view->with(['pageTitle' => 'Speaking Events List']);
+        });
+        view()->composer('admin.speaking_events.create', function ($view) {
+            $view->with(['pageTitle' => 'Add Speaking Event']);
+        });
+        view()->composer('admin.speaking_events.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Speaking Event']);
+        });
+        view()->composer('admin.speaking_events.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit Speaking Event']);
+        });
+
+        /*
+         * Speaker
+         */
+        view()->composer('admin.speakers.index', function ($view) {
+            $view->with(['pageTitle' => 'Speakers List']);
+        });
+        view()->composer('admin.speakers.create', function ($view) {
+            $view->with(['pageTitle' => 'Add Speaker']);
+        });
+        view()->composer('admin.speakers.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Speaker']);
+        });
+        view()->composer('admin.speakers.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit Speaker']);
+        });
+
+        /*
+         * Speaker Request
+         */
+        view()->composer('admin.speaker_requests.index', function ($view) {
+            $view->with(['pageTitle' => 'Speaker Request List']);
+        });
+        view()->composer('admin.speaker_requests.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Speaker Request']);
         });
 
         /*

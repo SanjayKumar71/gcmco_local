@@ -33,6 +33,86 @@ Breadcrumbs::for('admin.home_content.index', function ($breadcrumbs) {
 
 /*
 |--------------------------------------------------------------------------
+| History
+|--------------------------------------------------------------------------
+*/
+
+// History
+Breadcrumbs::for('admin.history.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('History', route('admin.history.index'));
+});
+// End History //
+
+/*
+|--------------------------------------------------------------------------
+| GCM Team
+|--------------------------------------------------------------------------
+*/
+
+// GCM Team
+Breadcrumbs::for('admin.gcm_team.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('GCM Team', route('admin.gcm_team.index'));
+});
+// GCM Team > New
+Breadcrumbs::for('admin.gcm_team.create', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.gcm_team.index');
+    $breadcrumbs->push('Add', route('admin.gcm_team.create'));
+});
+// GCM Team > Show
+Breadcrumbs::for('admin.gcm_team.show', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.gcm_team.index');
+    $breadcrumbs->push('GCM Team', route('admin.gcm_team.show', $data->id));
+});
+// GCM Team > Edit
+Breadcrumbs::for('admin.gcm_team.edit', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.gcm_team.show', $data);
+    $breadcrumbs->push('Edit', route('admin.gcm_team.edit', $data->id));
+});
+// End GCM Team //
+
+/*
+|--------------------------------------------------------------------------
+| What They Say
+|--------------------------------------------------------------------------
+*/
+
+/*
+|--------------------------------------------------------------------------
+| Who We Are
+|--------------------------------------------------------------------------
+*/
+
+// Who We Are
+Breadcrumbs::for('admin.who_we_are.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('Who We Are', route('admin.who_we_are.index'));
+});
+// End Who We Are //
+
+// Statement Of Faith
+Breadcrumbs::for('admin.statement_of_faith.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('Statement Of Faith', route('admin.statement_of_faith.index'));
+});
+// End Statement Of Faith //
+
+/*
+|--------------------------------------------------------------------------
+| Sponsor
+|--------------------------------------------------------------------------
+*/
+
+// Sponsor
+Breadcrumbs::for('admin.sponsors.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('Sponsor', route('admin.sponsors.index'));
+});
+// End Sponsor //
+
+/*
+|--------------------------------------------------------------------------
 | Campaign
 |--------------------------------------------------------------------------
 */
@@ -163,6 +243,90 @@ Breadcrumbs::for('admin.transactions.show', function ($breadcrumbs, $data) {
 
 /*
 |--------------------------------------------------------------------------
+| News Articles
+|--------------------------------------------------------------------------
+*/
+
+// News Articles
+Breadcrumbs::for('admin.news_articles.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('News Article List', route('admin.news_articles.index'));
+});
+// News Articles > New
+Breadcrumbs::for('admin.news_articles.create', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.news_articles.index');
+    $breadcrumbs->push('Add', route('admin.news_articles.create'));
+});
+// News Articles > Show
+Breadcrumbs::for('admin.news_articles.show', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.news_articles.index');
+    $breadcrumbs->push('News Article', route('admin.news_articles.show', $data->id));
+});
+// News Articles > Edit
+Breadcrumbs::for('admin.news_articles.edit', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.news_articles.show', $data);
+    $breadcrumbs->push('Edit', route('admin.news_articles.edit', $data->id));
+});
+// End News Articles //
+
+/*
+|--------------------------------------------------------------------------
+| Photo Gallery
+|--------------------------------------------------------------------------
+*/
+
+// Photo Gallery
+Breadcrumbs::for('admin.photo_gallery.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('Photo Gallery List', route('admin.photo_gallery.index'));
+});
+// Photo Gallery > New
+Breadcrumbs::for('admin.photo_gallery.create', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.photo_gallery.index');
+    $breadcrumbs->push('Add', route('admin.photo_gallery.create'));
+});
+// Photo Gallery > Show
+Breadcrumbs::for('admin.photo_gallery.show', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.photo_gallery.index');
+    $breadcrumbs->push('Photo Gallery', route('admin.photo_gallery.show', $data->id));
+});
+// Photo Gallery > Edit
+Breadcrumbs::for('admin.photo_gallery.edit', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.photo_gallery.show', $data);
+    $breadcrumbs->push('Edit', route('admin.photo_gallery.edit', $data->id));
+});
+// End Photo Gallery //
+
+/*
+|--------------------------------------------------------------------------
+| Video
+|--------------------------------------------------------------------------
+*/
+
+// Video
+Breadcrumbs::for('admin.videos.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('Video List', route('admin.videos.index'));
+});
+// Video > New
+Breadcrumbs::for('admin.videos.create', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.videos.index');
+    $breadcrumbs->push('Add', route('admin.videos.create'));
+});
+// Video > Show
+Breadcrumbs::for('admin.videos.show', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.videos.index');
+    $breadcrumbs->push('Video', route('admin.videos.show', $data->id));
+});
+// Video > Edit
+Breadcrumbs::for('admin.videos.edit', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.videos.show', $data);
+    $breadcrumbs->push('Edit', route('admin.videos.edit', $data->id));
+});
+// End Video //
+
+/*
+|--------------------------------------------------------------------------
 | Blogs
 |--------------------------------------------------------------------------
 */
@@ -229,8 +393,84 @@ Breadcrumbs::for('admin.contact_queries.index', function ($breadcrumbs) {
     $breadcrumbs->parent('admin.dashboard.index');
     $breadcrumbs->push('Contact List', route('admin.contact_queries.index'));
 });
+// Contact Queries > show
+Breadcrumbs::for('admin.contact_queries.show', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.contact_queries.index');
+    $breadcrumbs->push('Contact Query', route('admin.contact_queries.show', $data->id));
+});
 // End Contact Queries //
 
+
+/*
+|--------------------------------------------------------------------------
+| speaking_events
+|--------------------------------------------------------------------------
+*/
+// speaking_events
+Breadcrumbs::for('admin.speaking_events.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('speaking_events List', route('admin.speaking_events.index'));
+});
+// speaking_events > New
+Breadcrumbs::for('admin.speaking_events.create', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.speaking_events.index');
+    $breadcrumbs->push('Add', route('admin.speaking_events.create'));
+});
+// speaking_events > Show
+Breadcrumbs::for('admin.speaking_events.show', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.speaking_events.index');
+    $breadcrumbs->push($data->title, route('admin.speaking_events.show', $data->id));
+});
+// speaking_events > Edit
+Breadcrumbs::for('admin.speaking_events.edit', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.speaking_events.show', $data);
+    $breadcrumbs->push('Edit', route('admin.speaking_events.edit', $data->id));
+});
+// End speaking_events //
+
+/*
+|--------------------------------------------------------------------------
+| Speakers
+|--------------------------------------------------------------------------
+*/
+// Speakers
+Breadcrumbs::for('admin.speakers.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('speakers List', route('admin.speakers.index'));
+});
+// Speakers > New
+Breadcrumbs::for('admin.speakers.create', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.speakers.index');
+    $breadcrumbs->push('Add', route('admin.speakers.create'));
+});
+// Speakers > Show
+Breadcrumbs::for('admin.speakers.show', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.speakers.index');
+    $breadcrumbs->push('Speaker', route('admin.speakers.show', $data->id));
+});
+// Speakers > Edit
+Breadcrumbs::for('admin.speakers.edit', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.speakers.show', $data);
+    $breadcrumbs->push('Edit', route('admin.speakers.edit', $data->id));
+});
+// End Speakers //
+
+/*
+|--------------------------------------------------------------------------
+| Speaker Requests
+|--------------------------------------------------------------------------
+*/
+// Speaker Requests
+Breadcrumbs::for('admin.speaker_requests.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('Speaker Requests List', route('admin.speaker_requests.index'));
+});
+// speaker_requests > Show
+Breadcrumbs::for('admin.speaker_requests.show', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.speaker_requests.index');
+    $breadcrumbs->push('Speaker Request', route('admin.speaker_requests.show', $data->id));
+});
+// End Speaker Requests //
 
 /*
 |--------------------------------------------------------------------------

@@ -29,11 +29,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
        $siteSettings  = \App\Models\SiteSetting::find(1);
-       $campaigns     = \App\Models\Campaign::get();
+       $campaigns     = \App\Models\Campaign::with('getSubCampaigns')->where('status', 1)->get();
        View::share('siteSettings',
            array(
-               'siteSettings'=>$siteSettings,
-               'campaigns'=>$campaigns
+               'siteSettings' => $siteSettings,
+               'campaigns'    => $campaigns
            ));
 
         Schema::defaultStringLength(191);

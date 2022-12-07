@@ -46,7 +46,7 @@
                                     <th>Is Featured</th>
                                     <th>Status</th>
                                     <th>Created Ago</th>
-                                    <th width="10%" class="text-center">Actions</th>
+                                    <th width="18%" class="text-center">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -69,7 +69,7 @@
                                             @endif
                                         </td>
                                         <td>{!! $record->created_at->diffForHumans(); !!}</td>
-                                        <td class="center text-center" width="16%">
+                                        <td class="center text-center" width="18%">
                                             <a href="{!! URL::route('admin.campaigns.show', $record->id) !!}" class="btn btn-xs blue"
                                             title="Show Record">
                                                 <i class="fa fa-search"></i>

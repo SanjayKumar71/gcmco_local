@@ -285,7 +285,8 @@
                 var code = $("#txtPhone").intlTelInput("getSelectedCountryData").dialCode;
                 var phoneNumber = $('#txtPhone').val();
                 var name = $("#txtPhone").intlTelInput("getSelectedCountryData").name;
-                alert('Country Code : ' + code + '\nPhone Number : ' + phoneNumber + '\nCountry Name : ' + name);
+                $('#phone').val(code+""+phoneNumber);
+                // alert('Country Code : ' + code + '\nPhone Number : ' + phoneNumber + '\nCountry Name : ' + name);
             });
         });
     </script>

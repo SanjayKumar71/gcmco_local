@@ -2,17 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\Admin\BlogStoreRequest;
-use App\Http\Requests\Admin\BlogUpdateRequest;
-use App\Http\Requests\Admin\EventStoreRequest;
 use App\Http\Requests\Admin\EventUpdateRequest;
-use App\Models\Blog;
 use App\Models\ContactUs;
-use App\Models\Event;
 use Illuminate\Http\Request;
-use App\Http\Requests\Admin\UpdateMediaFileRequest;
-use App\Models\MediaFile;
-use App\Http\Requests\Admin\StoreMediaFileRequest;
 
 class ContactController extends Controller
 {
@@ -73,7 +65,9 @@ class ContactController extends Controller
      */
     public function show($id)
     {
+        $records = ContactUs::where('id', $id)->first();
 
+        return view('admin.contact_queries.show', compact('records'));
     }
 
     /**

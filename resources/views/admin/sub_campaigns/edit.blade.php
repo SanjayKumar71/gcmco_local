@@ -25,10 +25,22 @@
                         <h4>&nbsp;</h4>
 
                         <form method="POST" action="{{ route('admin.sub_campaigns.update', $records->id) }}" class="form-horizontal"
-                            role="form" enctype="multipart/form-records">
+                            role="form" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
-
+                            <div class="form-group">
+                                <label for="campaign_id" class="col-md-2 control-label">Campaign</label>
+                                <div class="col-md-4">
+                                    <select class="form-control" name="campaign_id" required>
+                                        <option>- Select Campaign -</option>
+                                        @if(count($siteSettings['campaigns']) > 0)
+                                            @foreach($siteSettings['campaigns'] as $key => $val)
+                                                <option value="{{ $val->id }}" {{ old('campaign_id',$records->campaign_id) == $val->id ? 'selected="selected"' : '' }}>{{ $val->title }}</option>
+                                            @endforeach
+                                        @endif
+                                    </select>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label for="title" class="col-md-2 control-label">Title *</label>
                                 <div class="col-md-8">
@@ -51,20 +63,6 @@
                                     <input type="hidden" name="previous_image" value="{!! $records->image !!}"/>
                                 </div>
                                 <img height="100" width="150" src="{!! asset(uploadsDir().$records->image) !!}"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="is_featured" class="col-md-2 control-label">Is Featured</label>
-                                <div>
-                                    <input type="radio" name="is_featured" value="1" {{ old('is_featured',$records->is_featured) == '1' ? 'checked="checked"' : '' }}>Yes 
-                                    <input type="radio" name="is_featured" value="0" {{ old('is_featured',$records->is_featured) == '0' ? 'checked="checked"' : '' }} style="margin-left: 10px;"> No
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="is_default" class="col-md-2 control-label">Is Default</label>
-                                <div>
-                                    <input type="radio" name="is_default" value="1" {{ old('is_default',$records->is_default) == '1' ? 'checked="checked"' : '' }}>Yes
-                                    <input type="radio" name="is_default" value="0" {{ old('is_default',$records->is_default) == '0' ? 'checked="checked"' : '' }} style="margin-left: 10px;"> No
-                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="last_name" class="col-md-2 control-label">Status *</label>

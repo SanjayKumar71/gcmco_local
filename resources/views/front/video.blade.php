@@ -22,27 +22,19 @@
                 <hr class="black_liner">
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <div>
-                        <video width="100%" height="400px" controls>
-                            <source src="{{ asset('front_assets/img/video/video1.mp4') }}" type="video/mp4">
-                        </video>
+
+                @if(count($records) > 0)
+                    @foreach($records as $videoKey => $videoVal)
+                    <div class="col-md-6">
+                        <div>
+                            <video width="100%" height="400px" controls>
+                                <source src="{{ asset(uploadsDir().$videoVal->video) }}" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div>
-                        <video width="100%" height="400px" controls>
-                            <source src="{{ asset('front_assets/img/video/video2.mp4') }}" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-4">
-                    <div>
-                        <video width="100%" height="400px" controls>
-                            <source src="{{ asset('front_assets/img/video/video3.mp4') }}" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
+                    @endforeach
+                @endif
+
             </div>
         </div>
     </section>

@@ -25,7 +25,7 @@
                         <h4>&nbsp;</h4>
 
                         <form method="POST" action="{{ route('admin.campaigns.update', $records->id) }}" class="form-horizontal"
-                            role="form" enctype="multipart/form-records">
+                            role="form" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
 

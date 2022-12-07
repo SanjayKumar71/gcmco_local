@@ -53,9 +53,16 @@ Route::name('admin.')->group(
 
 //        Route::middleware(['permission'])->group(function () {
             Route::resource('home_content', 'HomeController');
-            // Route::resource('blogs', 'BlogsController');
-            Route::resource('category', 'CategoryController');
+            Route::resource('history', 'HistoryController');
+            Route::resource('gcm_team', 'GCMTeamController');
+            Route::resource('what_they_say', 'WhatTheySayController');
+            Route::resource('who_we_are', 'WhoWeAreController');
+            Route::resource('statement_of_faith', 'StatementOfFaithController');
+            Route::resource('sponsors', 'SponsorController');
             Route::resource('contact_queries', 'ContactController');
+            Route::resource('speaking_events', 'SpeakingEventController');
+            Route::resource('speakers', 'SpeakerController');
+            Route::resource('speaker_requests', 'SpeakerRequestController');
             Route::resource('about_us', 'AboutUsController');
             Route::resource('administrators', 'AdministratorsController');
             Route::resource('campaigns', 'CampaignController');
@@ -63,6 +70,9 @@ Route::name('admin.')->group(
             Route::resource('donation_types', 'DonationTypeController');
             Route::resource('donation_amount', 'DonationAmountController');
             Route::resource('transactions', 'TransactionController');
+            Route::resource('news_articles', 'NewsArticleController');
+            Route::resource('photo_gallery', 'PhotoGalleryController');
+            Route::resource('videos', 'VideoController');
             Route::resource('pages', 'PagesController');
             Route::resource('users', 'UsersController');
             Route::resource('newsletter', 'NewsletterController');

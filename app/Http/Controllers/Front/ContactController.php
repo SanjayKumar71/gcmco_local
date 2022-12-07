@@ -8,17 +8,22 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
+
+    public function contact_information(){
+        return view("front.contact_information");
+    }
+
     public function store(Request $request)
     {
         $validated = $request->validate(
             [
-                'full_name' => 'required|regex:/^[a-zA-Z]+$/u',
+                'first_name' => 'required|regex:/^[a-zA-Z]+$/u',
                 'email'     => 'required|email:rfc,dns',
                 'phone'     => 'required|regex:/^([0-9\s\+]*)$/'
             ], 
             [
-                'full_name.required' => 'Full Name is required',
-                'full_name.regex'    => 'Full Name should be only alphabets',
+                'first_name.required' => 'Full Name is required',
+                'first_name.regex'    => 'Full Name should be only alphabets',
                 'email.required'     => 'Email is required',
                 'email.email'        => 'Invalid Email Format',
                 'phone.regex'        => 'Phone number should be only +/numbers'
@@ -27,9 +32,12 @@ class ContactController extends Controller
 
         $data = $request->except([
             '_token',
-            '_method'
+            '_method',
+            'full_number',
+            'contact_number'
         ]);
+        
         ContactUs::create($data);
-        return redirect()->back()->with('success', 'Your query sent successfully!');
+        return redirect()->back()->with('success', 'Your message sent successfully!');
     }
 }
